@@ -20,19 +20,19 @@ const serviceColumns: ServiceColumn[] = [
     title: "Explore Services",
     isBold: true,
     links: [
-      { label: "Strategic Solutions", href: "/page7", image: "/page7.png" },
-      { label: "AI Automation", href: "/page9", image: "/page9.png" },
-      { label: "White Label", href: "/page10", image: "/page10.png" },
-      { label: "Digital Products", href: "/page11", image: "/page11.png" },
-      { label: "MVP Development", href: "/page14", image: "/page14.png" },
+      { label: "Strategic Solutions", href: "/strategic-solutions", image: "/page7.png" },
+      { label: "AI Automation", href: "/ai-automation", image: "/page9.png" },
+      { label: "White Label", href: "/white-label", image: "/page10.png" },
+      { label: "Digital Products", href: "/digital-products", image: "/page11.png" },
+      { label: "MVP Development", href: "/mvp-development", image: "/page14.png" },
     ],
   },
   {
     title: "Growth & Marketing",
     isBold: true,
     links: [
-      { label: "Sales & Outreach", href: "/page12", image: "/page12.png" },
-      { label: "Marketing Solutions", href: "/page13", image: "/page13.png" },
+      { label: "Sales & Outreach", href: "/sales-outreach", image: "/page12.png" },
+      { label: "Marketing Solutions", href: "/marketing-solutions", image: "/page13.png" },
     ],
   },
   {

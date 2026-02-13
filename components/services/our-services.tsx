@@ -189,11 +189,11 @@ export function OurServices() {
       className="relative bg-white z-0"
       style={{ height: `${sectionHeight}px` }}
     >
-      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden pt-6 md:pt-8 bg-white">
+      <div className="sticky top-0 h-screen flex flex-col justify-center  pt-6 mb-30 md:pt-8 bg-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <div className="flex flex-col items-center text-center mb-6 md:mb-8 lg:mb-12 relative">
             <div className="mb-3 md:mb-4">
-              <div className="px-4 py-1.5 md:px-5 md:py-2 border border-gray-400 rounded-full inline-block">
+              <div className="px-4 py-1.5 md:px-5 md:py-2 mt-40 border border-gray-400 rounded-full inline-block">
                 <span className="text-xs md:text-sm font-medium text-gray-700">Our Services</span>
               </div>
             </div>
