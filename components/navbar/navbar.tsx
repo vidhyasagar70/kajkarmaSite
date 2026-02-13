@@ -13,8 +13,11 @@ interface NavbarProps {
     blogs?: BlogItem[]
 }
 
+import { ProfileDownloadPopup } from "../contact/profile-download-popup"
+
 export function Navbar({ blogs = [] }: NavbarProps) {
     const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
+    const [isProfileOpen, setIsProfileOpen] = React.useState(false)
 
     const [activeDropdown, setActiveDropdown] = React.useState<"services" | "resources" | null>(null)
     const [dropdownVisible, setDropdownVisible] = React.useState(false)
@@ -100,7 +103,7 @@ export function Navbar({ blogs = [] }: NavbarProps) {
                                 <a
                                     href={link.href}
                                     className={cn(
-                                        "text-[14px] font-medium transition-colors duration-300 flex items-center gap-1",
+                                        "text-[14px] font-medium transition-colors duration-300 flex items-center gap-1 cursor-pointer",
                                         activeDropdown === link.key
                                             ? "text-[#6F5CF3]"
                                             : "text-black hover:text-[#6F5CF3]"
@@ -173,10 +176,21 @@ export function Navbar({ blogs = [] }: NavbarProps) {
                         }}
                     >
                         {activeDropdown === "services" && <ServicesDropdown isOpen />}
-                        {activeDropdown === "resources" && <ResourcesDropdown isOpen blogs={blogs} />}
+                        {activeDropdown === "resources" && (
+                            <ResourcesDropdown
+                                isOpen
+                                blogs={blogs}
+                                onProfileDownloadClick={() => setIsProfileOpen(true)}
+                            />
+                        )}
                     </div>
                 </div>
             </header>
+
+            <ProfileDownloadPopup
+                isOpen={isProfileOpen}
+                onClose={() => setIsProfileOpen(false)}
+            />
 
             <div
                 className="fixed inset-0 z-40 hidden lg:block"
@@ -230,7 +244,14 @@ export function Navbar({ blogs = [] }: NavbarProps) {
 
                                             {mobileResourcesOpen && (
                                                 <div className="bg-[#f5f5f7]">
-                                                    <ResourcesDropdown isOpen blogs={blogs} />
+                                                    <ResourcesDropdown
+                                                        isOpen
+                                                        blogs={blogs}
+                                                        onProfileDownloadClick={() => {
+                                                            setIsProfileOpen(true)
+                                                            setMobileMenuOpen(false)
+                                                        }}
+                                                    />
                                                 </div>
                                             )}
 

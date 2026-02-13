@@ -17,10 +17,19 @@ interface ServiceColumn {
 
 const serviceColumns: ServiceColumn[] = [
   {
-    title: "Explore Services",
+    title: "Website & Application",
     isBold: true,
     links: [
-      { label: "Strategic Solutions", href: "/strategic-solutions", image: "/page7.png" },
+      { label: "Mobile Apps", href: "/mobile-apps", image: "/page11.png" },
+      { label: "Smart website", href: "/smart-website", image: "/page7.png" },
+      { label: "Ecommerce", href: "/ecommerce", image: "/page10.png" },
+      { label: "Custom market solution", href: "/custom-market-solution", image: "/page14.png" },
+    ],
+  },
+  {
+    title: "Special Services",
+    isBold: true,
+    links: [
       { label: "AI Automation", href: "/ai-automation", image: "/page9.png" },
       { label: "White Label", href: "/white-label", image: "/page10.png" },
       { label: "Digital Products", href: "/digital-products", image: "/page11.png" },
@@ -31,8 +40,10 @@ const serviceColumns: ServiceColumn[] = [
     title: "Growth & Marketing",
     isBold: true,
     links: [
-      { label: "Sales & Outreach", href: "/sales-outreach", image: "/page12.png" },
-      { label: "Marketing Solutions", href: "/marketing-solutions", image: "/page13.png" },
+      { label: "View all Services", href: "/view-all-services", image: "/page7.png" },
+      { label: "SEO", href: "/seo", image: "/page12.png" },
+      { label: "PPC Advertisement", href: "/ppc-advertisement", image: "/page13.png" },
+      { label: "Social Media Management", href: "/social-media-management", image: "/page14.png" },
     ],
   },
   {
@@ -70,19 +81,19 @@ export function ServicesDropdown({ isOpen }: ServicesDropdownProps) {
 
   return (
     <div className="w-full bg-white lg:border-b lg:border-gray-200/60">
-      <div className="mx-auto max-w-[980px] px-6 py-8 lg:py-10">
+      <div className="mx-auto max-w-[1240px] px-6 py-8 lg:py-10">
         <div className="flex">
           {/* Left Preview Area */}
-          <div 
-            className="hidden lg:block w-[200px] flex-shrink-0 pr-10 border-r border-gray-200/60"
+          <div
+            className="hidden lg:block w-[180px] flex-shrink-0 pr-8 border-r border-gray-200/60"
             style={{
               opacity: isOpen ? 1 : 0,
               transition: 'opacity 400ms ease 100ms',
             }}
           >
             <div className="sticky top-0">
-              <div 
-                className="w-[160px] h-[110px] rounded-xl overflow-hidden bg-[#f5f5f7]"
+              <div
+                className="w-[140px] h-[100px] rounded-xl overflow-hidden bg-[#f5f5f7]"
                 style={{
                   opacity: hoveredImage ? 1 : 0.4,
                   transform: hoveredImage ? 'scale(1)' : 'scale(0.98)',
@@ -93,8 +104,8 @@ export function ServicesDropdown({ isOpen }: ServicesDropdownProps) {
                   <Image
                     src={activeImage}
                     alt="Preview"
-                    width={160}
-                    height={110}
+                    width={140}
+                    height={100}
                     className="w-full h-full object-contain"
                   />
                 )}
@@ -104,9 +115,9 @@ export function ServicesDropdown({ isOpen }: ServicesDropdownProps) {
 
           {/* Right Links Area */}
           <div className="flex-1 lg:pl-10">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
               {serviceColumns.map((column, colIndex) => (
-                <div 
+                <div
                   key={column.title}
                   style={{
                     opacity: isOpen ? 1 : 0,
@@ -120,7 +131,7 @@ export function ServicesDropdown({ isOpen }: ServicesDropdownProps) {
 
                   <ul className="space-y-1">
                     {column.links.map((link, linkIndex) => (
-                      <li 
+                      <li
                         key={link.label}
                         style={{
                           opacity: isOpen ? 1 : 0,
@@ -130,11 +141,10 @@ export function ServicesDropdown({ isOpen }: ServicesDropdownProps) {
                       >
                         <a
                           href={link.href}
-                          className={`block py-1 text-[#1d1d1f] transition-all duration-150 hover:text-[#6F5CF3] ${
-                            column.isBold 
-                              ? 'text-[15px] font-medium' 
-                              : 'text-[12px] font-normal'
-                          }`}
+                          className={`block py-1 text-[#1d1d1f] transition-all duration-150 hover:text-[#6F5CF3] ${column.isBold
+                            ? 'text-[15px] font-medium'
+                            : 'text-[12px] font-normal'
+                            }`}
                           onMouseEnter={() => handleMouseEnter(link.image)}
                           onMouseLeave={handleMouseLeave}
                         >

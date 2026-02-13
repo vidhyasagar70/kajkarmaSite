@@ -34,7 +34,7 @@ export function ContactPopup({ isOpen, onClose }: Props) {
 
       setSuccess(true);
       setForm({ firstName: "", lastName: "", phoneNumber: "", description: "" });
-      
+
       setTimeout(() => {
         setSuccess(false);
         onClose();
@@ -64,7 +64,7 @@ export function ContactPopup({ isOpen, onClose }: Props) {
           <div className="py-12 text-center">
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500 flex items-center justify-center">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                <path d="M5 13l4 4L19 7" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M5 13l4 4L19 7" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             <p className="text-white text-xl font-medium">Thank you!</p>

@@ -15,9 +15,16 @@ export interface BlogItem {
 interface ResourcesDropdownProps {
   isOpen: boolean
   blogs?: BlogItem[]
+  onProfileDownloadClick?: () => void
 }
 
-export function ResourcesDropdown({ isOpen, blogs: initialBlogs = [] }: ResourcesDropdownProps) {
+import { ProfileDownloadPopup } from "../contact/profile-download-popup"
+
+export function ResourcesDropdown({
+  isOpen,
+  blogs: initialBlogs = [],
+  onProfileDownloadClick
+}: ResourcesDropdownProps) {
   const [hoveredImage, setHoveredImage] = React.useState<string | null>(null)
   const [activeImage, setActiveImage] = React.useState<string | null>(null)
   const [blogs, setBlogs] = useState<BlogItem[]>(initialBlogs)
@@ -63,7 +70,7 @@ export function ResourcesDropdown({ isOpen, blogs: initialBlogs = [] }: Resource
       <div className="mx-auto max-w-[980px] px-6 py-8 lg:py-10">
         <div className="flex">
           {/* Left Preview Area */}
-          <div 
+          <div
             className="hidden lg:block w-[200px] flex-shrink-0 pr-10 border-r border-gray-200/60"
             style={{
               opacity: isOpen && hoveredImage ? 1 : 0,
@@ -72,7 +79,7 @@ export function ResourcesDropdown({ isOpen, blogs: initialBlogs = [] }: Resource
             }}
           >
             <div className="sticky top-0">
-              <div 
+              <div
                 className="w-[160px] h-[110px] rounded-xl overflow-hidden bg-[#f5f5f7]"
                 style={{
                   opacity: hoveredImage ? 1 : 0,
@@ -97,7 +104,7 @@ export function ResourcesDropdown({ isOpen, blogs: initialBlogs = [] }: Resource
           <div className="flex-1 lg:pl-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
               {/* Blogs Column */}
-              <div 
+              <div
                 style={{
                   opacity: isOpen ? 1 : 0,
                   transform: isOpen ? 'translateY(0)' : 'translateY(-8px)',
@@ -113,7 +120,7 @@ export function ResourcesDropdown({ isOpen, blogs: initialBlogs = [] }: Resource
                     <li className="py-1.5 text-[13px] text-[#86868b]">Loading...</li>
                   ) : displayBlogs.length > 0 ? (
                     displayBlogs.map((blog, index) => (
-                      <li 
+                      <li
                         key={blog._id}
                         style={{
                           opacity: isOpen ? 1 : 0,
@@ -139,7 +146,7 @@ export function ResourcesDropdown({ isOpen, blogs: initialBlogs = [] }: Resource
                 </ul>
 
                 {/* View All Link */}
-                <div 
+                <div
                   className="mt-4"
                   style={{
                     opacity: isOpen ? 1 : 0,
@@ -156,7 +163,7 @@ export function ResourcesDropdown({ isOpen, blogs: initialBlogs = [] }: Resource
               </div>
 
               {/* Quick Links Column */}
-              <div 
+              <div
                 style={{
                   opacity: isOpen ? 1 : 0,
                   transform: isOpen ? 'translateY(0)' : 'translateY(-8px)',
@@ -170,11 +177,11 @@ export function ResourcesDropdown({ isOpen, blogs: initialBlogs = [] }: Resource
                 <ul className="space-y-1">
                   {[
                     { label: "Case Studies", href: "#" },
-                    { label: "Documentation", href: "#" },
+                    { label: "Company Profile", onClick: onProfileDownloadClick },
                     { label: "Support", href: "#" },
                     { label: "Contact Sales", href: "/contact" },
                   ].map((link, index) => (
-                    <li 
+                    <li
                       key={link.label}
                       style={{
                         opacity: isOpen ? 1 : 0,
@@ -182,12 +189,21 @@ export function ResourcesDropdown({ isOpen, blogs: initialBlogs = [] }: Resource
                         transition: `opacity 280ms ease ${200 + index * 25}ms, transform 280ms ease ${200 + index * 25}ms`,
                       }}
                     >
-                      <Link
-                        href={link.href}
-                        className="block py-1.5 text-[12px] font-normal text-[#1d1d1f] transition-all duration-150 hover:text-[#6F5CF3]"
-                      >
-                        {link.label}
-                      </Link>
+                      {link.href ? (
+                        <Link
+                          href={link.href}
+                          className="block py-1.5 text-[12px] font-normal text-[#1d1d1f] transition-all duration-150 hover:text-[#6F5CF3] cursor-pointer"
+                        >
+                          {link.label}
+                        </Link>
+                      ) : (
+                        <button
+                          onClick={link.onClick}
+                          className="block py-1.5 text-[12px] font-normal text-[#1d1d1f] transition-all duration-150 hover:text-[#6F5CF3] text-left w-full cursor-pointer focus:outline-none"
+                        >
+                          {link.label}
+                        </button>
+                      )}
                     </li>
                   ))}
                 </ul>

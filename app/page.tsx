@@ -16,7 +16,7 @@ import { AILampHero } from "@/components/ai/ai-lamp-hero";
 import { WeCraftSection } from "@/components/we-craft/we-craft-section";
 import { OurPackageSection } from "@/components/package/our-package-section";
 import { HowItWorksSection } from "@/components/how-it-works/how-it-works-section";
-// import { BlogsSection } from "@/components/blogs/blogs-section";
+import { VisionSection } from "@/components/vision/vision-section";
 
 
 
@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-white">
       <NavbarWrapper />
-  
+
       <HeroCarousel />
       {/* <WhatWeDoSection />
       <WhatAutomationSection />
@@ -34,7 +34,9 @@ export default function Home() {
       <HowWeGetStartedSection /> */}
       <OurServices />
       <OutreachSuperpowers />
+       <VisionSection />
       <TestimonialsSection />
+     
       {/* <ComparisonSection /> */}
       <FAQSection />
       {/* <HowItWorksSection /> */}
@@ -43,7 +45,7 @@ export default function Home() {
 
       {/* <ContactSection /> */}
       <FooterSection />
-      
+
     </main>
   );
 }
