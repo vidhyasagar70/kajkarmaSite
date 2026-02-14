@@ -32,6 +32,7 @@ interface ReusableHeroProps {
   backgroundImage: string;
   backgroundAlt?: string;
   buttons?: HeroButton[];
+  buttonSize?: "small" | "normal";
   titleStyles?: TitleStyles;
   descriptionStyles?: DescriptionStyles;
   marginLeft?: string;
@@ -44,6 +45,7 @@ export function ReusableHero({
   backgroundImage,
   backgroundAlt = "Hero Background",
   buttons = [],
+  buttonSize = "normal",
   titleStyles = {},
   descriptionStyles = {},
   marginLeft = "61px",
@@ -174,7 +176,7 @@ export function ReusableHero({
             <div
               className="flex flex-row gap-3 sm:gap-4"
               style={{
-                marginTop: isMobile ? "28px" : "40px",
+                marginTop: isMobile ? "20px" : "28px",
                 opacity: isLoaded ? 1 : 0,
                 transform: isLoaded ? "translateY(0)" : "translateY(20px)",
                 transition: "opacity 0.6s ease-out 0.2s, transform 0.6s ease-out 0.2s",
@@ -186,7 +188,9 @@ export function ReusableHero({
                   onClick={button.onClick}
                   className="font-geist flex items-center justify-center gap-2 transition-all duration-200 active:scale-[0.97]"
                   style={{
-                    padding: isMobile ? "12px 18px" : "14px 24px",
+                    padding: isMobile
+                      ? "10px 18px"
+                      : (buttonSize === "small" ? "10px 22px" : "14px 24px"),
                     borderRadius: "100px",
                     backgroundColor:
                       button.variant === "primary"
@@ -197,7 +201,9 @@ export function ReusableHero({
                         ? "#FFFFFF"
                         : "#9220E1",
                     fontWeight: 500,
-                    fontSize: isMobile ? "14px" : "16px",
+                    fontSize: isMobile
+                      ? "14px"
+                      : (buttonSize === "small" ? "14px" : "16px"),
                     border: "none",
                     whiteSpace: "nowrap",
                   }}
