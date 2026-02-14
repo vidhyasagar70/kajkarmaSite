@@ -18,10 +18,16 @@ export function AppFinalCTA() {
                     Whether you need an ecommerce app, marketplace platform, SaaS product, or custom business system, we design and develop applications engineered for growth, performance, and long-term scalability.
                 </p>
 
-                <button className="group relative px-8 sm:px-12 py-5 sm:py-6 bg-[#7C3AED] text-white rounded-full font-semibold text-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(124,58,237,0.4)]">
+                <button
+                    className="group relative bg-[#9220E1] text-white rounded-full font-medium transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(146,32,225,0.3)] hover:bg-[#7C3AED]"
+                    style={{
+                        padding: "10px 22px",
+                        fontSize: "14px",
+                    }}
+                >
                     <span className="relative z-10 flex items-center gap-3">
                         Schedule a Strategy Consultation
-                        <MessageCircle size={24} className="group-hover:rotate-12 transition-transform" />
+                        <MessageCircle size={18} className="group-hover:rotate-12 transition-transform" />
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 </button>

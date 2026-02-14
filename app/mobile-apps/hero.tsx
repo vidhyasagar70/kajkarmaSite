@@ -24,6 +24,7 @@ export function MobileAppsHero() {
                 { text: "Start Your Project", variant: "primary" },
                 { text: "View Our Work", variant: "outline" },
             ]}
+            buttonSize="small"
         />
     );
 }

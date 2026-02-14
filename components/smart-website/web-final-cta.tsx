@@ -18,14 +18,26 @@ export function WebFinalCTA() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-6">
-                    <button className="px-10 py-5 bg-[#7C3AED] text-white rounded-full font-semibold text-lg hover:bg-[#6D28D9] transition-all flex items-center gap-3 group shadow-[0_0_40px_rgba(124,58,237,0.3)]">
+                    <button
+                        className="bg-[#9220E1] text-white rounded-full font-medium transition-all flex items-center gap-3 group shadow-[0_0_30px_rgba(146,32,225,0.2)] hover:bg-[#7C3AED]"
+                        style={{
+                            padding: "10px 22px",
+                            fontSize: "14px",
+                        }}
+                    >
                         Book Your Strategy Consultation
-                        <MessageCircle size={22} className="group-hover:rotate-12 transition-transform" />
+                        <MessageCircle size={18} className="group-hover:rotate-12 transition-transform" />
                     </button>
 
-                    <button className="px-10 py-5 bg-white/10 text-white border border-white/20 rounded-full font-semibold text-lg hover:bg-white/20 transition-all flex items-center gap-3">
+                    <button
+                        className="bg-white/10 text-white border border-white/20 rounded-full font-medium transition-all flex items-center gap-3"
+                        style={{
+                            padding: "10px 22px",
+                            fontSize: "14px",
+                        }}
+                    >
                         Get a Free Project Estimate
-                        <FileText size={22} />
+                        <FileText size={18} />
                     </button>
                 </div>
             </div>

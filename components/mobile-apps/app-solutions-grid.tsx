@@ -40,7 +40,7 @@ export function AppSolutionsGrid() {
                     <h2
                         className="font-clash font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-tight text-[#0A0E31] mb-6"
                     >
-                        Application Solutions Built for <span className="text-[#7C3AED]">Real Business Growth</span>
+                        Application Solutions Built for <span className="text-[#9220E1]">Real Business Growth</span>
                     </h2>
                     <p
                         className="font-geist font-normal text-[16px] sm:text-[18px] leading-relaxed text-[#0A0E31]/70 max-w-[800px]"

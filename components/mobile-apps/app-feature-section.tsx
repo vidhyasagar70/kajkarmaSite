@@ -20,7 +20,7 @@ export function AppFeatureSection() {
                     {/* Right Column - Text */}
                     <div className="w-full lg:w-1/2 flex flex-col gap-6 sm:gap-8">
                         <h2 className="font-clash font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-tight text-[#0A0E31]">
-                            High-Performance Ecommerce & <span className="text-[#7C3AED]">Marketplace Engineering</span>
+                            High-Performance Ecommerce & <span className="text-[#9220E1]">Marketplace Engineering</span>
                         </h2>
 
                         <div className="flex flex-col gap-6">
@@ -37,7 +37,7 @@ export function AppFeatureSection() {
                         <div className="grid grid-cols-2 gap-4 mt-4">
                             {["Payment Gateways", "Inventory Systems", "ERP Software", "CRM Tools"].map((item, i) => (
                                 <div key={i} className="flex items-center gap-2">
-                                    <div className="size-2 rounded-full bg-[#7C3AED]" />
+                                    <div className="size-2 rounded-full bg-[#9220E1]" />
                                     <span className="font-geist text-sm text-[#0A0E31]">{item}</span>
                                 </div>
                             ))}

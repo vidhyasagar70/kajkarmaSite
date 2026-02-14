@@ -20,7 +20,7 @@ export function MaintenanceSection() {
                     {/* Content Column */}
                     <div className="w-full lg:w-1/2 flex flex-col gap-6 sm:gap-8">
                         <h2 className="font-clash font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-tight text-[#0A0E31]">
-                            Website Maintenance & <span className="text-[#7C3AED]">1-Year Support</span>
+                            Website Maintenance & <span className="text-[#9220E1]">1-Year Support</span>
                         </h2>
                         <p className="font-geist font-normal text-[16px] sm:text-[18px] leading-relaxed text-[#0A0E31]/70">
                             Your website must remain secure, updated, and optimized. We provide structured maintenance and support including:
@@ -29,7 +29,7 @@ export function MaintenanceSection() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-2">
                             {maintenanceFeatures.map((feature, i) => (
                                 <div key={i} className="flex items-center gap-3">
-                                    <ShieldCheck size={20} className="text-[#7C3AED]" />
+                                    <ShieldCheck size={20} className="text-[#9220E1]" />
                                     <span className="font-geist text-[16px] text-[#0A0E31]/80">{feature}</span>
                                 </div>
                             ))}
@@ -39,16 +39,22 @@ export function MaintenanceSection() {
                             We ensure your website continues to perform long after launch.
                         </p>
 
-                        <button className="w-fit px-8 py-4 bg-[#7C3AED] text-white rounded-full font-semibold text-lg hover:bg-[#6D28D9] transition-all flex items-center gap-2 group">
+                        <button
+                            className="w-fit bg-[#9220E1] text-white rounded-full font-medium hover:bg-[#7C3AED] transition-all flex items-center gap-2 group shadow-md shadow-[#9220E1]/10"
+                            style={{
+                                padding: "10px 22px",
+                                fontSize: "14px",
+                            }}
+                        >
                             Protect & Maintain Your Website
-                            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                         </button>
                     </div>
 
                     {/* Image Column */}
                     <div className="w-full lg:w-1/2 relative aspect-[4/3] rounded-[40px] overflow-hidden bg-white shadow-xl flex items-center justify-center p-12">
                         {/* Visual for Maintenance/Support */}
-                        <svg width="200" height="200" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[60%] h-[60%] text-[#7C3AED] opacity-20">
+                        <svg width="200" height="200" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[60%] h-[60%] text-[#9220E1] opacity-20">
                             <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1" />
                             <path d="M12 6L12 12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         </svg>

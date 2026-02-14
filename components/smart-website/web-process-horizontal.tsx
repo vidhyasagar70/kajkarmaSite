@@ -33,7 +33,7 @@ export function WebProcessHorizontal() {
         <section className="w-full bg-[#f8f7fc] py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-[1400px] mx-auto">
                 <h2 className="font-clash font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-tight text-[#0A0E31] mb-12">
-                    Our Website Development <span className="text-[#7C3AED]">Process</span>
+                    Our Website Development <span className="text-[#9220E1]">Process</span>
                 </h2>
 
                 <p className="font-geist font-normal text-[16px] sm:text-[18px] leading-relaxed text-[#0A0E31]/70 mb-12 max-w-[800px]">
@@ -44,11 +44,11 @@ export function WebProcessHorizontal() {
                     {steps.map((step, index) => (
                         <div key={index} className="flex-1 flex flex-col gap-6 relative group">
                             <div className="flex items-center gap-6">
-                                <div className="size-14 rounded-full border border-[#7C3AED]/20 bg-white flex items-center justify-center font-clash font-semibold text-xl text-[#7C3AED] group-hover:bg-[#7C3AED] group-hover:text-white transition-all duration-300">
+                                <div className="size-14 rounded-full border border-[#9220E1]/20 bg-white flex items-center justify-center font-clash font-semibold text-xl text-[#9220E1] group-hover:bg-[#9220E1] group-hover:text-white transition-all duration-300">
                                     {step.number}
                                 </div>
                                 {index < steps.length - 1 && (
-                                    <div className="hidden md:block absolute top-[27px] left-[56px] w-full h-[1px] bg-gradient-to-r from-[#7C3AED]/30 to-transparent" />
+                                    <div className="hidden md:block absolute top-[27px] left-[56px] w-full h-[1px] bg-gradient-to-r from-[#9220E1]/30 to-transparent" />
                                 )}
                             </div>
                             <div className="flex flex-col gap-4">
@@ -59,7 +59,13 @@ export function WebProcessHorizontal() {
                     ))}
                 </div>
 
-                <button className="mt-16 px-10 py-5 bg-[#7C3AED] text-white rounded-full font-semibold text-lg hover:bg-[#6D28D9] transition-all shadow-lg hover:shadow-[#7C3AED]/40">
+                <button
+                    className="mt-16 bg-[#9220E1] text-white rounded-full font-medium transition-all shadow-lg shadow-[#9220E1]/10 hover:bg-[#7C3AED]"
+                    style={{
+                        padding: "10px 22px",
+                        fontSize: "14px",
+                    }}
+                >
                     Start the Process Today
                 </button>
             </div>

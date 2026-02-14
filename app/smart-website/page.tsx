@@ -8,32 +8,9 @@ import { WebSEOSection } from "@/components/smart-website/web-seo-section";
 import { MaintenanceSection } from "@/components/smart-website/maintenance-section";
 import { WebPricingTable } from "@/components/smart-website/web-pricing-table";
 import { WebProcessHorizontal } from "@/components/smart-website/web-process-horizontal";
-import { SplitFaqSection } from "@/components/ui/split-faq-section";
+import { WebFAQ } from "./web-faq";
 import { WebFinalCTA } from "@/components/smart-website/web-final-cta";
 import { FooterSection } from "@/components/footer/footer-section";
-
-const websiteFaqs = [
-    {
-        question: "What does a high-converting website include?",
-        answer: "A high-converting website includes optimized user flow, clear CTAs, fast load speed, SEO architecture, and structured content built around user intent.",
-    },
-    {
-        question: "How much does ecommerce website development cost?",
-        answer: "Ecommerce website development typically ranges between 5,000 and 20,000 USD depending on complexity, integrations, and customization level.",
-    },
-    {
-        question: "Do you provide website maintenance after launch?",
-        answer: "Yes. We offer structured maintenance plans and include ongoing support to ensure your website remains secure and optimized.",
-    },
-    {
-        question: "Can you build a jewelry ecommerce website?",
-        answer: "Yes. We specialize in jewelry and diamond platforms with advanced filtering, inventory integration, and premium UI design.",
-    },
-    {
-        question: "How long does website development take?",
-        answer: "Business websites usually take 3–6 weeks, while ecommerce and advanced builds may take 6–10 weeks.",
-    },
-];
 
 export const metadata: Metadata = {
     title: "High-Converting Website Development Services | KajKarma",
@@ -107,13 +84,10 @@ export default function SmartWebsitePage() {
             <WebPricingTable />
             <WebProcessHorizontal />
 
-            <SplitFaqSection
-                title="Frequently Asked Questions"
-                items={websiteFaqs}
-                imageSrc="/page11.png"
-            />
+            <WebFAQ />
 
             <WebFinalCTA />
+
             <FooterSection />
         </main>
     );

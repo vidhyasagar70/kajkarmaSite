@@ -55,8 +55,14 @@ export function PlatformGrid() {
                                 ))}
                             </div>
 
-                            <button className="flex items-center gap-2 text-[#7C3AED] font-medium group mt-2">
-                                Get Platform Recommendation
+                            <button
+                                className="w-fit mt-4 bg-[#9220E1] text-white rounded-full font-medium transition-all flex items-center gap-2 group shadow-md shadow-[#9220E1]/10 hover:bg-[#7C3AED]"
+                                style={{
+                                    padding: "10px 22px",
+                                    fontSize: "14px",
+                                }}
+                            >
+                                Get Recommendation
                                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                             </button>
                         </div>

@@ -44,8 +44,8 @@ export function WebPricingTable() {
                         <div
                             key={index}
                             className={`p-8 rounded-[32px] border-2 transition-all duration-300 flex flex-col ${tier.featured
-                                    ? "bg-[#1F0A3B] border-[#7C3AED] text-white shadow-xl"
-                                    : "bg-white border-[#F0F0F0] text-[#0A0E31]"
+                                ? "bg-[#1F0A3B] border-[#7C3AED] text-white shadow-xl"
+                                : "bg-white border-[#F0F0F0] text-[#0A0E31]"
                                 }`}
                         >
                             <h3 className="font-clash font-medium text-2xl mb-6">{tier.name}</h3>
@@ -60,10 +60,16 @@ export function WebPricingTable() {
                                 <span className="text-xl md:text-2xl font-semibold">{tier.investment}</span>
                             </div>
 
-                            <button className={`mt-auto px-6 py-4 rounded-full font-semibold transition-all flex items-center justify-center gap-2 ${tier.featured
-                                    ? "bg-[#7C3AED] text-white hover:bg-[#6D28D9]"
-                                    : "bg-[#F8F7FC] text-[#0A0E31] hover:bg-[#7C3AED] hover:text-white"
-                                }`}>
+                            <button
+                                className={`mt-auto rounded-full font-medium transition-all flex items-center justify-center gap-2 ${tier.featured
+                                    ? "bg-[#9220E1] text-white hover:bg-[#7C3AED]"
+                                    : "bg-[#F8F7FC] text-[#0A0E31] border border-[#F0F0F0] hover:bg-[#9220E1] hover:text-white"
+                                    }`}
+                                style={{
+                                    padding: "10px 22px",
+                                    fontSize: "14px",
+                                }}
+                            >
                                 Request a Custom Proposal
                                 <ArrowRight size={16} />
                             </button>

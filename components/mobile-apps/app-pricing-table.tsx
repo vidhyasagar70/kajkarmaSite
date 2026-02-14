@@ -50,8 +50,8 @@ export function AppPricingTable() {
                         <div
                             key={index}
                             className={`flex flex-col p-8 rounded-[32px] transition-all duration-300 border-2 ${tier.featured
-                                    ? "bg-[#1F0A3B] border-[#7C3AED] shadow-[0_0_40px_rgba(124,58,237,0.2)]"
-                                    : "bg-white border-[#F0F0F0] hover:border-[#7C3AED]/30"
+                                ? "bg-[#1F0A3B] border-[#7C3AED] shadow-[0_0_40px_rgba(124,58,237,0.2)]"
+                                : "bg-white border-[#F0F0F0] hover:border-[#7C3AED]/30"
                                 }`}
                         >
                             <h3 className={`font-clash font-medium text-2xl mb-2 ${tier.featured ? "text-white" : "text-[#0A0E31]"}`}>
@@ -80,10 +80,16 @@ export function AppPricingTable() {
                                 {tier.description}
                             </p>
 
-                            <button className={`mt-10 px-6 py-4 rounded-full font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 ${tier.featured
-                                    ? "bg-[#7C3AED] text-white hover:bg-[#6D28D9]"
-                                    : "bg-[#F8F7FC] text-[#0A0E31] hover:bg-[#7C3AED] hover:text-white"
-                                }`}>
+                            <button
+                                className={`mt-10 rounded-full font-medium transition-all duration-200 flex items-center justify-center gap-2 ${tier.featured
+                                    ? "bg-[#9220E1] text-white hover:bg-[#7C3AED]"
+                                    : "bg-[#F8F7FC] text-[#0A0E31] border border-[#F0F0F0] hover:bg-[#9220E1] hover:text-white"
+                                    }`}
+                                style={{
+                                    padding: "10px 22px",
+                                    fontSize: "14px",
+                                }}
+                            >
                                 Get Details
                                 <ArrowRight size={16} />
                             </button>
@@ -93,7 +99,13 @@ export function AppPricingTable() {
 
                 {/* CTA Below Table */}
                 <div className="text-center mt-12 sm:mt-16">
-                    <button className="px-10 py-5 bg-[#7C3AED] text-white rounded-full font-semibold text-lg hover:bg-[#6D28D9] transition-all shadow-lg hover:shadow-[#7C3AED]/40">
+                    <button
+                        className="bg-[#9220E1] text-white rounded-full font-medium transition-all shadow-lg shadow-[#9220E1]/10 hover:bg-[#7C3AED]"
+                        style={{
+                            padding: "10px 22px",
+                            fontSize: "14px",
+                        }}
+                    >
                         Request Detailed Proposal
                     </button>
                 </div>

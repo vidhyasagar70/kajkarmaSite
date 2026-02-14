@@ -26,6 +26,7 @@ export function CustomMarketSolutionHero() {
                 { text: "Connect With Us", variant: "primary" },
                 { text: "Find Your Perfect Mix", variant: "outline" },
             ]}
+            buttonSize="small"
         />
     );
 }

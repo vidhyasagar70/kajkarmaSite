@@ -58,7 +58,13 @@ export function WebSEOSection() {
                             Your website is engineered not only to look premium but to dominate relevant search queries in your niche.
                         </p>
 
-                        <button className="w-fit px-8 py-4 bg-white text-[#130624] rounded-full font-semibold text-lg hover:bg-[#9220E1] hover:text-white transition-all shadow-xl">
+                        <button
+                            className="w-fit bg-white text-[#130624] rounded-full font-medium hover:bg-[#9220E1] hover:text-white transition-all shadow-xl"
+                            style={{
+                                padding: "10px 22px",
+                                fontSize: "14px",
+                            }}
+                        >
                             Improve Your Search Visibility
                         </button>
                     </div>

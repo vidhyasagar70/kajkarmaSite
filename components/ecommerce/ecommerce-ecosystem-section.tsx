@@ -20,7 +20,7 @@ export function EcommerceEcosystemSection() {
                     {/* Content Column */}
                     <div className="w-full lg:w-1/2 flex flex-col gap-6 sm:gap-8">
                         <h2 className="font-clash font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-tight text-[#0A0E31]">
-                            Complete Ecommerce Ecosystem: <span className="text-[#7C3AED]">Website + Android App + iOS App</span>
+                            Complete Ecommerce Ecosystem: <span className="text-[#9220E1]">Website + Android App + iOS App</span>
                         </h2>
                         <p className="font-geist font-normal text-[16px] sm:text-[18px] leading-relaxed text-[#0A0E31]/70">
                             Launch a fully integrated ecommerce ecosystem with a high-converting website, Android application, and iOS application — built under one unified architecture.
@@ -34,7 +34,7 @@ export function EcommerceEcosystemSection() {
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 mt-4">
                                 {bundleFeatures.map((feature, i) => (
                                     <div key={i} className="flex items-center gap-3">
-                                        <CheckCircle2 size={18} className="text-[#7C3AED] shrink-0" />
+                                        <CheckCircle2 size={18} className="text-[#9220E1] shrink-0" />
                                         <span className="font-geist text-[15px] sm:text-[16px] text-[#0A0E31]/80">{feature}</span>
                                     </div>
                                 ))}
@@ -45,9 +45,15 @@ export function EcommerceEcosystemSection() {
                             Whether you are building a D2C brand, multi-vendor marketplace, jewelry ecommerce platform, or B2B commerce system, this bundle provides everything required to operate and scale.
                         </p>
 
-                        <button className="w-fit px-8 py-4 bg-[#7C3AED] text-white rounded-full font-semibold text-lg hover:bg-[#6D28D9] transition-all flex items-center gap-3 group shadow-lg">
+                        <button
+                            className="w-fit bg-[#9220E1] text-white rounded-full font-medium transition-all flex items-center gap-3 group shadow-md shadow-[#9220E1]/10 hover:bg-[#7C3AED]"
+                            style={{
+                                padding: "10px 22px",
+                                fontSize: "14px",
+                            }}
+                        >
                             Start Your Ecommerce Bundle
-                            <ShoppingBag size={20} className="group-hover:scale-110 transition-transform" />
+                            <ShoppingBag size={18} className="group-hover:scale-110 transition-transform" />
                         </button>
                     </div>
 

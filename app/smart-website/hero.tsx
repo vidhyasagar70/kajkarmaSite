@@ -10,7 +10,7 @@ export function SmartWebsiteHero() {
                     High-Converting Website Development Services
                 </span>
             }
-            subtitle="Build Websites That Generate Revenue — Not Just Traffic"
+
             description="Your website is not a design project. It is a growth asset. At Kajkarma Innovation, we develop high-converting business websites, ecommerce platforms, jewelry websites, and fully custom digital systems engineered for performance, SEO visibility, and long-term scalability. We combine technical architecture, conversion psychology, AI-driven keyword research, and strategic content planning to ensure your website becomes your most powerful sales engine."
             backgroundImage="/hhero.jpg"
             backgroundAlt="Smart Website Background"
@@ -24,6 +24,7 @@ export function SmartWebsiteHero() {
             buttons={[
                 { text: "Start Your Website Project Today", variant: "primary" },
             ]}
+            buttonSize="small"
         />
     );
 }

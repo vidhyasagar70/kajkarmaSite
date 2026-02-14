@@ -10,9 +10,9 @@ import { EcommerceMaintenanceSection } from "@/components/ecommerce/ecommerce-ma
 import { EcommerceTimelineProject } from "@/components/ecommerce/ecommerce-timeline-project";
 import { EcommerceProcessHorizontal } from "@/components/ecommerce/ecommerce-process-horizontal";
 import { EcommerceWhyChooseList } from "@/components/ecommerce/ecommerce-why-choose-list";
+import { EcommerceFAQ } from "./ecommerce-faq";
 import { EcommerceFinalCTA } from "@/components/ecommerce/ecommerce-final-cta";
 import { FooterSection } from "@/components/footer/footer-section";
-
 
 export const metadata: Metadata = {
     title: "Complete Ecommerce Ecosystem | KajKarma",
@@ -34,6 +34,7 @@ export default function EcommercePage() {
             <EcommerceTimelineProject />
             <EcommerceProcessHorizontal />
             <EcommerceWhyChooseList />
+            <EcommerceFAQ />
             <EcommerceFinalCTA />
 
             <FooterSection />

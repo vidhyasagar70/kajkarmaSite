@@ -38,7 +38,7 @@ export function SplitServiceSection({
                                 {title}
                             </h2>
                             {subtitle && (
-                                <p className={`font-clash text-xl sm:text-2xl ${isDark ? "text-[#9220E1]" : "text-[#7C3AED]"}`}>
+                                <p className={`font-clash text-xl sm:text-2xl text-[#9220E1]`}>
                                     {subtitle}
                                 </p>
                             )}
@@ -51,18 +51,24 @@ export function SplitServiceSection({
                         <div className="grid grid-cols-1 gap-y-3 my-2">
                             {features.map((feature, i) => (
                                 <div key={i} className="flex items-center gap-3">
-                                    <CheckCircle2 size={18} className={isDark ? "text-[#9220E1]" : "text-[#7C3AED]"} strokeWidth={3} />
+                                    <CheckCircle2 size={18} className="text-[#9220E1]" strokeWidth={3} />
                                     <span className={`font-geist text-[16px] ${isDark ? "text-white/80" : "text-[#0A0E31]/80"}`}>{feature}</span>
                                 </div>
                             ))}
                         </div>
 
-                        <button className={`w-fit mt-4 px-8 py-4 rounded-full font-semibold text-lg transition-all flex items-center gap-2 group ${isDark
-                                ? "bg-[#7C3AED] text-white hover:bg-[#6D28D9]"
-                                : "bg-[#F8F7FC] text-[#0A0E31] border border-[#F0F0F0] hover:bg-[#7C3AED] hover:text-white"
-                            }`}>
+                        <button
+                            className={`w-fit mt-4 rounded-full font-medium transition-all flex items-center gap-2 group ${isDark
+                                ? "bg-[#9220E1] text-white hover:bg-[#7C3AED]"
+                                : "bg-[#F8F7FC] text-[#0A0E31] border border-[#F0F0F0] hover:bg-[#9220E1] hover:text-white"
+                                }`}
+                            style={{
+                                padding: "10px 22px",
+                                fontSize: "14px",
+                            }}
+                        >
                             {ctaText}
-                            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                         </button>
                     </div>
 
