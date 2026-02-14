@@ -6,25 +6,23 @@ export function MobileAppsHero() {
     return (
         <ReusableHero
             title={
-                <>
-                    Mobile App
-                    <br />
-                    Solutions
-                </>
+                <span className="font-clash">
+                    Custom App Development Services for Scalable Digital Platforms
+                </span>
             }
-            description="We build high-performance mobile applications tailored to your business needs and user expectations."
+            description="We design and develop ecommerce applications, marketplace platforms, SaaS products, and custom business systems built for performance, scalability, and long-term revenue growth."
             backgroundImage="/hhero.jpg"
             backgroundAlt="Mobile Apps Background"
             titleStyles={{
-                fontSize: "140px",
-                lineHeight: "112px",
+                fontSize: "clamp(48px, 6vw, 100px)",
+                lineHeight: "1.1",
                 fontWeight: 500,
-                letterSpacing: "0%",
-                maxWidth: "911px",
+                letterSpacing: "-0.02em",
+                maxWidth: "1100px",
             }}
             buttons={[
-                { text: "Connect With Us", variant: "primary" },
-                { text: "Find Your Perfect Mix", variant: "outline" },
+                { text: "Start Your Project", variant: "primary" },
+                { text: "View Our Work", variant: "outline" },
             ]}
         />
     );

@@ -27,6 +27,7 @@ interface DescriptionStyles {
 
 interface ReusableHeroProps {
   title: string | React.ReactNode;
+  subtitle?: string;
   description: string;
   backgroundImage: string;
   backgroundAlt?: string;
@@ -38,6 +39,7 @@ interface ReusableHeroProps {
 
 export function ReusableHero({
   title,
+  subtitle,
   description,
   backgroundImage,
   backgroundAlt = "Hero Background",
@@ -111,11 +113,25 @@ export function ReusableHero({
         {/* Content Overlay */}
         <div
           className="absolute inset-0 z-10 flex flex-col justify-center"
-          style={{ 
+          style={{
             paddingLeft: isMobile ? "24px" : `calc(${marginLeft} + 16px)`,
             paddingRight: isMobile ? "24px" : "16px"
           }}
         >
+          {subtitle && (
+            <p
+              className="font-clash text-[#9220E1] mb-2 sm:mb-4"
+              style={{
+                fontSize: isMobile ? "18px" : "24px",
+                fontWeight: 500,
+                opacity: isLoaded ? 1 : 0,
+                transform: isLoaded ? "translateY(0)" : "translateY(20px)",
+                transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+              }}
+            >
+              {subtitle}
+            </p>
+          )}
           {/* Heading */}
           <h1
             className="font-clash"
