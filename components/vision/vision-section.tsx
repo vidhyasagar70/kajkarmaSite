@@ -16,38 +16,38 @@ interface VisionCard {
 const visionCards: VisionCard[] = [
     {
         id: 1,
-        tag: "Hostinger Horizons",
-        title: "Shape your vision with AI",
-        description: "Turn your words into a new website or web app with Hostinger Horizons. All it takes is a simple AI prompt. No code, no technical jargon — instant results.",
+        tag: "Ecommerce Solutions",
+        title: "High-Converting Ecommerce Platforms",
+        description: "Custom ecommerce applications and Shopify stores engineered for speed, conversion, and seamless user experience. We build revenue-driven systems — not just online stores.",
         image: "/page11.png",
-        linkText: "Explore Hostinger Horizons",
+        linkText: "Build Your Ecommerce",
         linkHref: "#",
     },
     {
         id: 2,
-        tag: "Market Strategies",
-        title: "Tailored for your growth",
-        description: "Customized solutions designed to help your brand stand out in a competitive market and achieve sustainable growth.",
+        tag: "Marketplace Development",
+        title: "Marketplace & Multi-Vendor Development",
+        description: "Launch powerful marketplace platforms with vendor dashboards, commission systems, and scalable backend infrastructure — built to support rapid expansion and secure transactions.",
         image: "/page7.png",
-        linkText: "View Case Studies",
+        linkText: "Launch Your Marketplace",
         linkHref: "#",
     },
     {
         id: 3,
-        tag: "Ecommerce Hub",
-        title: "Sell anywhere, anytime",
-        description: "Powerful ecommerce solutions tailored to your business needs, helping you sell more and reach a wider audience effectively.",
+        tag: "Product Engineering",
+        title: "Build Scalable Digital Products",
+        description: "We design and develop custom web applications, SaaS platforms, and enterprise systems built for long-term scalability. From architecture planning to deployment, we engineer digital products that perform under growth.",
         image: "/page10.png",
-        linkText: "Start Selling",
+        linkText: "Explore Product Development",
         linkHref: "#",
     },
     {
         id: 4,
-        tag: "Digital presence",
-        title: "Modern web experiences",
-        description: "We build stunning, high-performance websites and web applications that deliver exceptional user experiences and drive conversions.",
+        tag: "Growth Strategy",
+        title: "AI-Driven SEO & Market Research",
+        description: "We combine technical SEO, competitor intelligence, and AI-powered keyword research to ensure every website and application is built for organic growth from day one.",
         image: "/page14.png",
-        linkText: "Get StartedNow",
+        linkText: "Unlock Growth Strategy",
         linkHref: "#",
     },
 ];
@@ -56,7 +56,7 @@ export function VisionSection() {
     return (
         <section className="w-full bg-white relative py-20 lg:py-32">
             {/* Header Section */}
-            <div className="container mx-auto px-4 md:px-8 lg:px-20 mb-16 text-center">
+            <div className="container mx-auto px-4 md:px-8 lg:px-20 mb-8 text-center">
                 <div className="flex flex-col items-center gap-6">
                     <div
                         className="px-4 py-1.5 rounded-full inline-block mt-0"
@@ -141,9 +141,9 @@ function VisionStackingCard({ card, index, totalCards }: VisionStackingCardProps
             ref={cardRef}
             className="sticky mb-0"
             style={{
-                top: `${80 + index * 30}px`,
+                top: "40px",
                 zIndex: index + 1,
-                paddingBottom: index === totalCards - 1 ? "0px" : "100px",
+                paddingBottom: "0px",
             }}
         >
             <div
@@ -151,7 +151,7 @@ function VisionStackingCard({ card, index, totalCards }: VisionStackingCardProps
                 onMouseEnter={() => !isMobile && setIsCardHovered(true)}
                 onMouseLeave={() => !isMobile && setIsCardHovered(false)}
             >
-                <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-20 p-8 lg:p-20">
+                <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-20 p-4 lg:p-12 min-h-[600px]">
                     {/* Left Column - Image Square */}
                     <div
                         className="w-full lg:w-[400px] xl:w-[450px] aspect-square relative flex-shrink-0 transition-transform duration-700 ease-out"
