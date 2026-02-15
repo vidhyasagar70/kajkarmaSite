@@ -18,8 +18,8 @@ const outreachCards: OutreachCard[] = [
         <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    title: "All the digital solutions your business actually needs",
-    description: "Custom applications, ecommerce platforms, marketplaces & SEO-driven websites — built for performance and growth.",
+    title: "Ecommerce Application Development",
+    description: "We build custom ecommerce applications with scalable architecture, secure payments, and conversion-optimized product flows designed for high-growth digital businesses.",
   },
   {
     number: "02",
@@ -129,15 +129,16 @@ export function OutreachSuperpowers() {
           </div>
 
           <h2 className="font-clash font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] 2xl:text-[54px] leading-[1.2] md:leading-[1.1] tracking-[0%] text-center mb-2 sm:mb-3 md:mb-4">
-            <span className="text-gray-900">All the email automation</span>
+            <span className="text-gray-900">All the digital solutions your</span>
             <br />
-            <span className="text-gray-900">you </span>
-            <span className="text-[#9220E1]">actually need</span>
+            <span className="text-gray-900">business</span>
+            <span className="text-[#9220E1]">  actually needs</span>
           </h2>
 
-          {/* <p className="text-gray-500 text-[10px] sm:text-xs md:text-sm lg:text-base">
-            Rotation, throttling, A/B tests, schedules & tracking.
-          </p> */}
+          <p className="text-gray-500 text-[10px] sm:text-xs md:text-sm lg:text-base">
+           
+Custom applications, ecommerce platforms, marketplaces & SEO-driven websites — built for performance and growth.
+          </p>
         </div>
 
         {/* Cards Grid */}
@@ -159,7 +160,7 @@ export function OutreachSuperpowers() {
                 onMouseLeave={handleMouseLeave}
               >
                 {/* Top Row - Icon and Number */}
-                {/* <div className="flex items-start justify-between mb-3 md:mb-4">
+                <div className="flex items-start justify-between mb-3 md:mb-4">
                   <div 
                     className={`w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center ${
                       isActive ? 'bg-white/20' : 'bg-[#7C3AED]/10'
@@ -176,7 +177,7 @@ export function OutreachSuperpowers() {
                   >
                     {card.number}
                   </span>
-                </div> */}
+                </div>
 
                 {/* Title */}
                 <h3 
@@ -203,7 +204,7 @@ export function OutreachSuperpowers() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8 sm:mt-10 md:mt-12">
           <button className="w-full sm:w-auto px-5 sm:px-6 py-2.5 sm:py-3 bg-[#7C3AED] text-white rounded-full font-semibold text-xs sm:text-sm hover:bg-[#6D28D9] transition-colors flex items-center justify-center gap-2">
-           View all services
+            View all services
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="sm:w-4 sm:h-4">
               <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
