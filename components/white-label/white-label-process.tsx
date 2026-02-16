@@ -1,98 +1,267 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
-interface ProcessStep {
-    phase: string;
-    title: string;
-    description: string;
-}
-
-const steps: ProcessStep[] = [
-    {
-        phase: "Phase 1",
-        title: "Scope Alignment",
-        description: "We review your client requirements and confirm feasibility."
-    },
-    {
-        phase: "Phase 2",
-        title: "Proposal & Timeline",
-        description: "Clear deliverables, milestones, and execution roadmap."
-    },
-    {
-        phase: "Phase 3",
-        title: "Development & Reporting",
-        description: "Structured progress updates and milestone completion."
-    },
-    {
-        phase: "Phase 4",
-        title: "Testing & Quality Control",
-        description: "Performance validation and issue resolution."
-    },
-    {
-        phase: "Phase 5",
-        title: "Final Delivery",
-        description: "Deployment and optional maintenance setup."
-    }
+const steps = [
+  {
+    number: "01.",
+    title: "Scope Alignment",
+    description:
+      "We review client requirements, confirm feasibility, and define clear project expectations.",
+  },
+  {
+    number: "02.",
+    title: "Proposal & Timeline",
+    description:
+      "Clear deliverables, milestones, and a structured execution roadmap.",
+  },
+  {
+    number: "03.",
+    title: "Development & Quality Control",
+    description:
+      "Structured progress updates, milestone completion, testing, and performance validation.",
+  },
+  {
+    number: "04.",
+    title: "Final Delivery & Support",
+    description:
+      "Deployment, issue resolution, and optional maintenance setup.",
+  },
 ];
 
+const getResponsivePositions = () => ({
+  circles: [
+    { top: "20%", left: "7%" },
+    { top: "39%", left: "32%" },
+    { top: "27%", left: "61%" },
+    { top: "-24%", left: "86%" },
+  ],
+  textOffsets: [
+    { top: "clamp(100px, 12vw, 160px)", left: "0" },
+    { top: "clamp(-220px, -23vw, -320px)", left: "clamp(0px, 0.3vw, 3px)" },
+    { top: "clamp(100px, 12vw, 160px)", left: "0" },
+    { top: "clamp(100px, 12vw, 160px)", left: "0" },
+  ],
+});
+
 export function WhiteLabelProcess() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [visibleSteps, setVisibleSteps] = useState<number[]>([]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  /* -------------------------
+     Mobile Detection
+  -------------------------- */
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  /* -------------------------
+     Scroll Animation Logic
+  -------------------------- */
+  useEffect(() => {
+    let rafId: number;
+
+    const handleScroll = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+
+      rafId = requestAnimationFrame(() => {
+        if (!containerRef.current) return;
+
+        const container = containerRef.current;
+        const windowHeight = window.innerHeight;
+        const containerOffsetTop = container.offsetTop;
+        const scrollY = window.scrollY || window.pageYOffset;
+
+        const scrollIntoContainer = scrollY - containerOffsetTop;
+        const scrollableDistance = container.offsetHeight - windowHeight;
+
+        if (scrollableDistance <= 0) return;
+
+        const progress = Math.max(
+          0,
+          Math.min(1, scrollIntoContainer / scrollableDistance)
+        );
+
+        const newVisibleSteps: number[] = [];
+
+        if (progress >= 0.05) newVisibleSteps.push(0);
+        if (progress >= 0.30) newVisibleSteps.push(1);
+        if (progress >= 0.55) newVisibleSteps.push(2);
+        if (progress >= 0.80) newVisibleSteps.push(3);
+
+        setVisibleSteps(newVisibleSteps);
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll, { passive: true });
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  }, []);
+
+  const positions = getResponsivePositions();
+
+  /* -------------------------
+     MOBILE LAYOUT
+  -------------------------- */
+  if (isMobile) {
     return (
-        <section className="w-full py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
-            <div className="max-w-[1400px] mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="font-clash font-medium text-[32px] sm:text-[42px] md:text-[54px] text-[#0A0E31] mb-5">
-                        Our Delivery <span className="text-[#9220E1]">Process</span>
-                    </h2>
-                </div>
+      <section className="w-full bg-[#FBF9FE] py-12 px-4">
+        <h2 className="font-clash font-medium text-[32px] leading-[1] text-[#0A0E31] mb-10">
+          Product <span className="text-[#9220E1]">Approach</span>
+        </h2>
 
-                <div className="relative">
-                    {/* Desktop Progress Line */}
-                    <div className="absolute top-[40px] left-0 w-full h-[1px] bg-[#F0F0F0] hidden lg:block" />
+        <div className="flex flex-col gap-8">
+          {steps.map((step, index) => (
+            <div key={index} className="flex gap-4 items-start">
+              <div className="relative w-[60px] h-[60px] flex-shrink-0">
+                <Image
+                  src="/Ellipse 65.svg"
+                  alt="Step circle"
+                  fill
+                  className="object-contain"
+                />
+              </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 relative">
-                        {steps.map((step, index) => (
-                            <motion.div
-                                key={step.title}
-                                initial={{ opacity: 0, y: 15 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.08 }}
-                                className="flex flex-col items-center text-center lg:items-start lg:text-left gap-5 group"
-                            >
-                                <div className="relative z-10 size-12 rounded-[16px] bg-[#FBF9FE] border border-[#F0F0F0] flex items-center justify-center text-[#9220E1] font-clash font-semibold text-base transition-all duration-300 group-hover:bg-[#9220E1] group-hover:text-white group-hover:border-[#9220E1] shadow-sm">
-                                    {index + 1}
-                                </div>
+              <div className="flex-1">
+                <p className="font-clash font-medium text-[28px] leading-[1] text-[#0A0E31]">
+                  {step.number}
+                </p>
 
-                                <div className="space-y-2.5">
-                                    <div className="flex flex-col">
-                                        <span className="font-clash font-semibold text-[#9220E1] text-[12px] uppercase tracking-widest mb-1">{step.phase}</span>
-                                        <h3 className="font-clash font-medium text-[20px] sm:text-[22px] text-[#0A0E31]">
-                                            {step.title}
-                                        </h3>
-                                    </div>
-                                    <p className="font-geist font-light text-[15px] sm:text-[16px] text-[#0A0E31]/60 leading-relaxed">
-                                        {step.description}
-                                    </p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
+                <h3 className="font-clash font-medium text-[24px] leading-[1.1] text-[#9220E1] mb-1">
+                  {step.title}
+                </h3>
 
-                <div className="mt-16 flex flex-col items-center">
-                    <p className="font-geist text-[#0A0E31]/60 text-center mb-8 italic">"You stay informed without being overloaded."</p>
-                    <button
-                        className="font-geist flex items-center justify-center transition-all duration-200 active:scale-[0.97] bg-[#9220E1] text-white rounded-full font-medium hover:bg-[#7C3AED] shadow-md shadow-[#9220E1]/10"
-                        style={{
-                            padding: "10px 22px",
-                            fontSize: "14px",
-                        }}
-                    >
-                        Start Your First White Label Project
-                    </button>
-                </div>
+                <p className="font-geist font-normal text-[14px] leading-[1.3] text-[#0A0E31]/80">
+                  {step.description}
+                </p>
+              </div>
             </div>
-        </section>
+          ))}
+        </div>
+      </section>
     );
+  }
+
+  /* -------------------------
+     DESKTOP LAYOUT
+  -------------------------- */
+  return (
+    <div ref={containerRef} className="relative" style={{ height: "300vh" }}>
+      <div className="sticky top-0 h-[800px] w-full bg-[#FBF9FE] overflow-hidden">
+        <div className="h-full py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-[72px]">
+          {/* Heading */}
+          <h2 className="font-clash font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-[1] lg:leading-[54px] text-[#0A0E31] mb-20">
+            Product <span className="text-[#9220E1]">Approach</span>
+          </h2>
+
+          {/* Roadmap Container */}
+          <div className="relative w-full mx-auto h-[65vh] max-h-[700px]">
+            {/* Path SVG */}
+            <div
+              className="absolute h-full"
+              style={{
+                width: "calc(100% + 10vw)",
+                left: "-5vw",
+                top: "-11vw",
+              }}
+            >
+              <Image
+                src="/Group 6356198.svg"
+                alt="Product Approach Path"
+                fill
+                className="object-contain object-center"
+                priority
+              />
+            </div>
+
+            {/* Steps */}
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                className={`absolute flex flex-col items-start transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  visibleSteps.includes(index)
+                    ? "opacity-100 scale-100"
+                    : "opacity-0 scale-75"
+                }`}
+                style={{
+                  top: positions.circles[index].top,
+                  left: positions.circles[index].left,
+                }}
+              >
+                {/* Circle */}
+                <div
+                  className={`relative transition-all duration-[1400ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+                    visibleSteps.includes(index)
+                      ? "scale-100 opacity-100"
+                      : "scale-0 opacity-0"
+                  }`}
+                  style={{
+                    width: "clamp(80px, 10vw, 152px)",
+                    height: "clamp(80px, 10vw, 150px)",
+                  }}
+                >
+                  <Image
+                    src="/Ellipse 65.svg"
+                    alt="Step circle"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+
+                {/* Text */}
+                <div
+                  className={`absolute transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    visibleSteps.includes(index)
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-8"
+                  }`}
+                  style={{
+                    width: "clamp(150px, 16vw, 224px)",
+                    top: positions.textOffsets[index].top,
+                    left: positions.textOffsets[index].left,
+                    transitionDelay: visibleSteps.includes(index)
+                      ? "400ms"
+                      : "0ms",
+                  }}
+                >
+                  <p
+                    className="font-clash font-medium text-[#0A0E31] mb-1"
+                    style={{ fontSize: "clamp(28px, 3vw, 44px)" }}
+                  >
+                    {step.number}
+                  </p>
+
+                  <h3
+                    className="font-clash font-medium text-[#9220E1] mb-2"
+                    style={{ fontSize: "clamp(10px, 2.1vw, 40px)" }}
+                  >
+                    {step.title}
+                  </h3>
+
+                  <p
+                    className="font-geist font-normal text-[#0A0E31]/80"
+                    style={{ fontSize: "clamp(12px, 1.2vw, 18px)" }}
+                  >
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

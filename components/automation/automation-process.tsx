@@ -1,93 +1,265 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
-interface ProcessStep {
-    phase: string;
-    title: string;
-    description: string;
-}
-
-const steps: ProcessStep[] = [
+const steps = [
     {
-        phase: "Phase 1",
-        title: "Process Audit",
-        description: "We analyze your current workflows, identify inefficiencies, and map automation opportunities."
+        number: "01.",
+        title: "Process Audit & Strategy",
+        description:
+            "We assess workflows, identify gaps, and define automation opportunities.",
     },
     {
-        phase: "Phase 2",
-        title: "Workflow Design",
-        description: "We design structured automation systems aligned with your tools and business model."
+        number: "02.",
+        title: "Workflow Design & Architecture",
+        description:
+            "Structured automation systems aligned with your tools and business model.",
     },
     {
-        phase: "Phase 3",
-        title: "Implementation",
-        description: "Integration with n8n, Zapier, CRM systems, ecommerce platforms, APIs, and AI tools."
+        number: "03.",
+        title: "Implementation & Integration",
+        description:
+            "Integration with n8n, Zapier, CRM systems, APIs, and AI tools.",
     },
     {
-        phase: "Phase 4",
-        title: "Testing & Optimization",
-        description: "Load testing, performance validation, error handling setup, and logic refinement."
+        number: "04.",
+        title: "Testing & Scaling",
+        description:
+            "Performance validation, monitoring setup, and continuous optimization.",
     },
-    {
-        phase: "Phase 5",
-        title: "Monitoring & Scaling",
-        description: "Ongoing optimization and advanced workflow expansion."
-    }
 ];
 
+
+const getResponsivePositions = () => ({
+    circles: [
+        { top: "20%", left: "7%" },
+        { top: "39%", left: "32%" },
+        { top: "27%", left: "61%" },
+        { top: "-24%", left: "86%" },
+    ],
+    textOffsets: [
+        { top: "clamp(100px, 12vw, 160px)", left: "0" },
+        { top: "clamp(-220px, -23vw, -320px)", left: "clamp(0px, 0.3vw, 3px)" },
+        { top: "clamp(100px, 12vw, 160px)", left: "0" },
+        { top: "clamp(100px, 12vw, 160px)", left: "0" },
+    ],
+});
+
 export function AutomationProcess() {
-    return (
-        <section className="w-full py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
-            <div className="max-w-[1400px] mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="font-clash font-medium text-[32px] sm:text-[42px] md:text-[54px] text-[#0A0E31] mb-5">
-                        Our Automation <span className="text-[#9220E1]">Implementation Process</span>
-                    </h2>
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [visibleSteps, setVisibleSteps] = useState<number[]>([]);
+    const [isMobile, setIsMobile] = useState(false);
+
+    /* -------------------------
+       Mobile Detection
+    -------------------------- */
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
+    /* -------------------------
+       Scroll Animation Logic
+    -------------------------- */
+    useEffect(() => {
+        let rafId: number;
+
+        const handleScroll = () => {
+            if (rafId) cancelAnimationFrame(rafId);
+
+            rafId = requestAnimationFrame(() => {
+                if (!containerRef.current) return;
+
+                const container = containerRef.current;
+                const windowHeight = window.innerHeight;
+                const containerOffsetTop = container.offsetTop;
+                const scrollY = window.scrollY || window.pageYOffset;
+
+                const scrollIntoContainer = scrollY - containerOffsetTop;
+                const scrollableDistance = container.offsetHeight - windowHeight;
+
+                if (scrollableDistance <= 0) return;
+
+                const progress = Math.max(
+                    0,
+                    Math.min(1, scrollIntoContainer / scrollableDistance)
+                );
+
+                const newVisibleSteps: number[] = [];
+
+                if (progress >= 0.05) newVisibleSteps.push(0);
+                if (progress >= 0.30) newVisibleSteps.push(1);
+                if (progress >= 0.55) newVisibleSteps.push(2);
+                if (progress >= 0.80) newVisibleSteps.push(3);
+
+                setVisibleSteps(newVisibleSteps);
+            });
+        };
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        window.addEventListener("resize", handleScroll, { passive: true });
+
+        handleScroll();
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleScroll);
+            if (rafId) cancelAnimationFrame(rafId);
+        };
+    }, []);
+
+    const positions = getResponsivePositions();
+
+    /* -------------------------
+       MOBILE LAYOUT
+    -------------------------- */
+    if (isMobile) {
+        return (
+            <section className="w-full bg-[#FBF9FE] py-12 px-4">
+                <h2 className="font-clash font-medium text-[32px] leading-[1] text-[#0A0E31] mb-10">
+                    Product <span className="text-[#9220E1]">Approach</span>
+                </h2>
+
+                <div className="flex flex-col gap-8">
+                    {steps.map((step, index) => (
+                        <div key={index} className="flex gap-4 items-start">
+                            <div className="relative w-[60px] h-[60px] flex-shrink-0">
+                                <Image
+                                    src="/Ellipse 65.svg"
+                                    alt="Step circle"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+
+                            <div className="flex-1">
+                                <p className="font-clash font-medium text-[28px] leading-[1] text-[#0A0E31]">
+                                    {step.number}
+                                </p>
+
+                                <h3 className="font-clash font-medium text-[24px] leading-[1.1] text-[#9220E1] mb-1">
+                                    {step.title}
+                                </h3>
+
+                                <p className="font-geist font-normal text-[14px] leading-[1.3] text-[#0A0E31]/80">
+                                    {step.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
+            </section>
+        );
+    }
 
-                <div className="relative">
-                    {/* Desktop Progress Line */}
-                    <div className="absolute top-[40px] left-0 w-full h-[1px] bg-[#F0F0F0] hidden lg:block" />
+    /* -------------------------
+       DESKTOP LAYOUT
+    -------------------------- */
+    return (
+        <div ref={containerRef} className="relative" style={{ height: "300vh" }}>
+            <div className="sticky top-0 h-[800px] w-full bg-[#FBF9FE] overflow-hidden">
+                <div className="h-full py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-[72px]">
+                    {/* Heading */}
+                    <h2 className="font-clash font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-[1] lg:leading-[54px] text-[#0A0E31] mb-20">
+                        Product <span className="text-[#9220E1]">Approach</span>
+                    </h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 relative">
+                    {/* Roadmap Container */}
+                    <div className="relative w-full mx-auto h-[65vh] max-h-[700px]">
+                        {/* Path SVG */}
+                        <div
+                            className="absolute h-full"
+                            style={{
+                                width: "calc(100% + 10vw)",
+                                left: "-5vw",
+                                top: "-11vw",
+                            }}
+                        >
+                            <Image
+                                src="/Group 6356198.svg"
+                                alt="Product Approach Path"
+                                fill
+                                className="object-contain object-center"
+                                priority
+                            />
+                        </div>
+
+                        {/* Steps */}
                         {steps.map((step, index) => (
-                            <motion.div
-                                key={step.title}
-                                initial={{ opacity: 0, y: 15 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.08 }}
-                                className="flex flex-col items-center text-center lg:items-start lg:text-left gap-5 group"
+                            <div
+                                key={index}
+                                className={`absolute flex flex-col items-start transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${visibleSteps.includes(index)
+                                        ? "opacity-100 scale-100"
+                                        : "opacity-0 scale-75"
+                                    }`}
+                                style={{
+                                    top: positions.circles[index].top,
+                                    left: positions.circles[index].left,
+                                }}
                             >
-                                <div className="relative z-10 size-12 rounded-[16px] bg-[#FBF9FE] border border-[#F0F0F0] flex items-center justify-center text-[#9220E1] font-clash font-semibold text-base transition-all duration-300 group-hover:bg-[#9220E1] group-hover:text-white group-hover:border-[#9220E1] shadow-sm">
-                                    {index + 1}
+                                {/* Circle */}
+                                <div
+                                    className={`relative transition-all duration-[1400ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] ${visibleSteps.includes(index)
+                                            ? "scale-100 opacity-100"
+                                            : "scale-0 opacity-0"
+                                        }`}
+                                    style={{
+                                        width: "clamp(80px, 10vw, 152px)",
+                                        height: "clamp(80px, 10vw, 150px)",
+                                    }}
+                                >
+                                    <Image
+                                        src="/Ellipse 65.svg"
+                                        alt="Step circle"
+                                        fill
+                                        className="object-contain"
+                                    />
                                 </div>
 
-                                <div className="space-y-2.5">
-                                    <div className="flex flex-col">
-                                        <span className="font-clash font-semibold text-[#9220E1] text-[12px] uppercase tracking-widest mb-1">{step.phase}</span>
-                                        <h3 className="font-clash font-medium text-[20px] sm:text-[22px] text-[#0A0E31]">
-                                            {step.title}
-                                        </h3>
-                                    </div>
-                                    <p className="font-geist font-light text-[15px] sm:text-[16px] text-[#0A0E31]/60 leading-relaxed">
+                                {/* Text */}
+                                <div
+                                    className={`absolute transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${visibleSteps.includes(index)
+                                            ? "opacity-100 translate-y-0"
+                                            : "opacity-0 translate-y-8"
+                                        }`}
+                                    style={{
+                                        width: "clamp(150px, 16vw, 224px)",
+                                        top: positions.textOffsets[index].top,
+                                        left: positions.textOffsets[index].left,
+                                        transitionDelay: visibleSteps.includes(index)
+                                            ? "400ms"
+                                            : "0ms",
+                                    }}
+                                >
+                                    <p
+                                        className="font-clash font-medium text-[#0A0E31] mb-1"
+                                        style={{ fontSize: "clamp(28px, 3vw, 44px)" }}
+                                    >
+                                        {step.number}
+                                    </p>
+
+                                    <h3
+                                        className="font-clash font-medium text-[#9220E1] mb-2"
+                                        style={{ fontSize: "clamp(10px, 2.3vw, 40px)" }}
+                                    >
+                                        {step.title}
+                                    </h3>
+
+                                    <p
+                                        className="font-geist font-normal text-[#0A0E31]/80"
+                                        style={{ fontSize: "clamp(12px, 1.2vw, 18px)" }}
+                                    >
                                         {step.description}
                                     </p>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </div>
-
-                <div className="mt-16 flex justify-center">
-                    <button
-                        className="font-geist flex items-center justify-center transition-all duration-200 active:scale-[0.97] bg-[#9220E1] text-white rounded-full font-medium hover:bg-[#7C3AED] shadow-md shadow-[#9220E1]/10 px-6 py-3.5 text-sm"
-                    >
-                        Start Your Automation Roadmap
-                    </button>
-                </div>
             </div>
-        </section>
+        </div>
     );
 }

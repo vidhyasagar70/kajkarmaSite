@@ -16,6 +16,7 @@ import { HowItWorksSection } from "@/components/how-it-works/how-it-works-sectio
 import { WhatWeDoSection } from "@/components/what-we-do/what-we-do-section";
 import { ComparisonSection } from "@/components/comparison/comparison-section";
 import { AILampHero } from "@/components/ai/ai-lamp-hero";
+import { ProductApproach } from "./product-approach";
 
 export default function MVPPage() {
   return (
@@ -104,10 +105,12 @@ export default function MVPPage() {
       />
 
       {/* 7. Process */}
-      <MVPProcess />
+      {/* <MVPProcess /> */}
+
+      <ProductApproach/>
 
       {/* 8. Existing: Comparison */}
-      <ComparisonSection />
+      {/* <ComparisonSection /> */}
 
       {/* 9. Grid: Timeline & Cost */}
       <MVPGrid
