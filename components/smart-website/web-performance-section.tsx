@@ -39,7 +39,7 @@ export function WebPerformanceSection() {
                         </p>
 
                         <button
-                            className="w-fit bg-[#9220E1] text-white rounded-full font-medium transition-all flex items-center gap-2 group shadow-md shadow-[#9220E1]/10 hover:bg-[#7C3AED]"
+                            className="w-fit  bg-[#7C3AED] text-white rounded-full font-medium transition-all flex items-center gap-2 group shadow-md shadow-[#9220E1]/10 hover:bg-[#9220E1]"
                             style={{
                                 padding: "10px 22px",
                                 fontSize: "14px",

@@ -107,7 +107,7 @@ export function EcommerceTimelineProject() {
                             <p className="font-geist text-[17px] text-[#0A0E31]/50 text-center mb-10 max-w-2xl italic leading-relaxed">
                                 We provide a detailed technical roadmap and investment breakdown before starting development.
                             </p>
-                            <button className="px-14 py-5 bg-[#0A0E31] text-white rounded-2xl font-clash font-semibold text-xl hover:bg-[#111] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-4 group shadow-2xl shadow-[#04071A]/20">
+                            <button className="px-10 py-3.5 bg-[#7C3AED] text-white rounded-2xl font-clash font-semibold text-lg hover:bg-[#9220E1] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-4 group shadow-2xl shadow-[#7C3AED]/20">
                                 Get a Custom Quote
                                 <ArrowRight className="group-hover:translate-x-1.5 transition-transform" size={22} />
                             </button>

@@ -51,7 +51,7 @@ export function AutomationSolutionsGrid({
                             transition={{ delay: index * 0.05, duration: 0.5 }}
                             className={`p-8 rounded-[32px] border transition-all duration-300 flex flex-col gap-5 group hover:shadow-lg ${dark
                                 ? "bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20"
-                                : "bg-[#FBF9FE] border-[#F0F0F0] hover:bg-white hover:border-[#9220E1]/15"
+                                : "bg-[#FBF9FE] border-[#F0F0F0] hover:bg-white hover:border-[#7C3AED]/15"
                                 }`}
                         >
                             <div>
@@ -69,7 +69,7 @@ export function AutomationSolutionsGrid({
                 {ctaText && (
                     <div className="mt-12">
                         <button
-                            className="font-geist flex items-center justify-center transition-all duration-200 active:scale-[0.97] bg-[#9220E1] text-white rounded-full font-medium hover:bg-[#7C3AED] shadow-md shadow-[#9220E1]/10"
+                            className="font-geist flex items-center justify-center transition-all duration-200 active:scale-[0.97] bg-[#7C3AED] text-white rounded-full font-medium hover:bg-[#9220E1] shadow-md shadow-[#7C3AED]/10"
                             style={{
                                 padding: "10px 22px",
                                 fontSize: "14px",

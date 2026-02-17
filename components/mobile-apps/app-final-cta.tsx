@@ -19,7 +19,7 @@ export function AppFinalCTA() {
                 </p>
 
                 <button
-                    className="group relative bg-[#9220E1] text-white rounded-full font-medium transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(146,32,225,0.3)] hover:bg-[#7C3AED]"
+                    className="group relative bg-[#7C3AED] hover:bg-[#9220E1] text-white rounded-full font-medium transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(146,32,225,0.3)] hover:bg-[#9220E1]"
                     style={{
                         padding: "10px 22px",
                         fontSize: "14px",

@@ -26,9 +26,9 @@ export function OurPackageSection() {
     <section className="relative w-full overflow-hidden">
       {/* Top white background - 12% */}
       <div className="absolute top-0 left-0 right-0 h-[8%] sm:h-[12%] bg-white z-0" />
-      
+
       {/* Bottom gradient background - 88% */}
-      <div 
+      <div
         className="absolute bottom-0 left-0 right-0 h-[92%] sm:h-[88%] z-0"
         style={{
           background: "linear-gradient(180deg, #1F0A3B 22%, #601A91 64%, #9220E1 94%)",
@@ -49,7 +49,7 @@ export function OurPackageSection() {
         </div>
 
         {/* Subtitle */}
-        <p 
+        <p
           className="text-center mt-2 sm:mt-4 text-white/70 text-sm sm:text-base md:text-lg lg:text-2xl px-4"
           style={{
             fontFamily: "'Geist', sans-serif",
@@ -65,10 +65,10 @@ export function OurPackageSection() {
           {/* First Row - For Business */}
           <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 justify-center">
             {/* Left Card - For Business */}
-            <div 
+            <div
               className="bg-white flex-1 max-w-[856px] flex flex-col rounded-2xl sm:rounded-3xl border border-gray-200 p-5 sm:p-6 md:p-8"
             >
-              <h3 
+              <h3
                 className="text-black font-clash font-medium text-2xl sm:text-3xl md:text-4xl leading-tight"
               >
                 For Business
@@ -77,14 +77,14 @@ export function OurPackageSection() {
 
               {/* Price and Toggle */}
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                <span 
+                <span
                   className="text-black font-clash font-medium text-2xl sm:text-3xl md:text-4xl"
                 >
                   $999
                 </span>
-                
+
                 {/* Toggle - Purple outline style */}
-                <div 
+                <div
                   className="flex items-center rounded-full p-[3px] w-fit"
                   style={{
                     border: "1.5px solid #9220E1",
@@ -146,10 +146,10 @@ export function OurPackageSection() {
             </div>
 
             {/* Right Card - All Features Covered (Business) */}
-            <div 
+            <div
               className="bg-white w-full lg:w-[380px] flex-shrink-0 flex flex-col rounded-2xl sm:rounded-3xl border border-gray-200 p-5 sm:p-6 md:p-8"
             >
-              <h3 
+              <h3
                 className="text-black font-clash font-medium text-xl sm:text-2xl leading-tight"
               >
                 All Features Covered
@@ -186,12 +186,12 @@ export function OurPackageSection() {
           {/* Second Row - For Branding */}
           <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 justify-center">
             {/* Left Card - For Branding */}
-            <div 
+            <div
               className="bg-white flex-1 max-w-[856px] flex flex-col rounded-2xl sm:rounded-3xl border border-gray-200 p-5 sm:p-6 md:p-8"
             >
               {/* Header with logos */}
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                <h3 
+                <h3
                   className="text-black font-clash font-medium text-2xl sm:text-3xl md:text-4xl leading-tight"
                 >
                   For Branding
@@ -211,14 +211,14 @@ export function OurPackageSection() {
 
               {/* Price and Toggle - Green */}
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                <span 
+                <span
                   className="text-black font-clash font-medium text-2xl sm:text-3xl md:text-4xl"
                 >
                   $999
                 </span>
-                
+
                 {/* Toggle - Green outline style */}
-                <div 
+                <div
                   className="flex items-center rounded-full p-[3px] w-fit"
                   style={{
                     border: "1.5px solid #2AB24B",
@@ -280,10 +280,10 @@ export function OurPackageSection() {
             </div>
 
             {/* Right Card - All Features Covered (Branding) */}
-            <div 
+            <div
               className="bg-white w-full lg:w-[380px] flex-shrink-0 flex flex-col rounded-2xl sm:rounded-3xl border border-gray-200 p-5 sm:p-6 md:p-8"
             >
-              <h3 
+              <h3
                 className="text-black font-clash font-medium text-xl sm:text-2xl leading-tight"
               >
                 All Features Covered

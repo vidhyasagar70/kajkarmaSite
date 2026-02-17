@@ -62,8 +62,8 @@ export function WebPricingTable() {
 
                             <button
                                 className={`mt-auto rounded-full font-medium transition-all flex items-center justify-center gap-2 ${tier.featured
-                                    ? "bg-[#9220E1] text-white hover:bg-[#7C3AED]"
-                                    : "bg-[#F8F7FC] text-[#0A0E31] border border-[#F0F0F0] hover:bg-[#9220E1] hover:text-white"
+                                    ? "bg-[#7C3AED] text-white hover:bg-[#9220E1]"
+                                    : "bg-[#F8F7FC] text-[#0A0E31] border border-[#F0F0F0] hover:bg-[#7C3AED] hover:text-white"
                                     }`}
                                 style={{
                                     padding: "10px 22px",

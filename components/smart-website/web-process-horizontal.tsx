@@ -160,7 +160,7 @@ export function  WebProcessHorizontal() {
   -------------------------- */
   return (
     <div ref={containerRef} className="relative" style={{ height: "300vh" }}>
-      <div className="sticky top-0 h-[800px] w-full bg-[#FBF9FE] overflow-hidden">
+      <div className="sticky top-0 h-[850px] w-full bg-[#FBF9FE] overflow-hidden">
         <div className="h-full py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-[72px]">
           {/* Heading */}
           <h2 className="font-clash font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-[1] lg:leading-[54px] text-[#0A0E31] mb-20">
@@ -246,7 +246,7 @@ export function  WebProcessHorizontal() {
 
                   <h3
                     className="font-clash font-medium text-[#9220E1] mb-2"
-                    style={{ fontSize: "clamp(10px, 2.3vw, 40px)" }}
+                    style={{ fontSize: "clamp(10px, 2.1vw, 40px)" }}
                   >
                     {step.title}
                   </h3>

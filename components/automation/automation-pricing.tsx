@@ -12,11 +12,11 @@ interface PricingTierProps {
 function PricingTier({ title, description, features, isPopular }: PricingTierProps) {
     return (
         <div className={`p-8 sm:p-10 rounded-[40px] border transition-all duration-500 flex flex-col gap-8 h-full ${isPopular
-            ? "bg-[#0A0E31] border-[#9220E1]/30 text-white shadow-xl shadow-[#9220E1]/10 relative"
-            : "bg-white border-[#F0F0F0] text-[#0A0E31] hover:border-[#9220E1]/15 hover:shadow-md"
+            ? "bg-[#0A0E31] border-[#7C3AED]/30 text-white shadow-xl shadow-[#7C3AED]/10 relative"
+            : "bg-white border-[#F0F0F0] text-[#0A0E31] hover:border-[#7C3AED]/15 hover:shadow-md"
             }`}>
             {isPopular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-[#9220E1] text-white rounded-full font-clash font-medium text-xs">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-[#7C3AED] text-white rounded-full font-clash font-medium text-xs">
                     Recommended
                 </div>
             )}
@@ -31,13 +31,13 @@ function PricingTier({ title, description, features, isPopular }: PricingTierPro
             </div>
 
             <div className="flex flex-col gap-4 flex-grow">
-                <p className="font-clash font-semibold text-[13px] uppercase tracking-wider text-[#9220E1]">
+                <p className="font-clash font-semibold text-[13px] uppercase tracking-wider text-[#7C3AED]">
                     What's Included:
                 </p>
                 <div className="flex flex-col gap-3.5">
                     {features.map((feature) => (
                         <div key={feature} className="flex items-start gap-2.5">
-                            <div className="size-1.5 rounded-full bg-[#9220E1] mt-2 shrink-0" />
+                            <div className="size-1.5 rounded-full bg-[#7C3AED] mt-2 shrink-0" />
                             <span className={`font-geist text-[15px] sm:text-[15.5px] leading-tight ${isPopular ? "text-white/80" : "text-[#0A0E31]/80"}`}>{feature}</span>
                         </div>
                     ))}
@@ -45,9 +45,9 @@ function PricingTier({ title, description, features, isPopular }: PricingTierPro
             </div>
 
             <button
-                className={`font-geist flex items-center justify-center transition-all duration-300 w-full rounded-[20px] font-medium py-4 text-base group ${isPopular
-                    ? "bg-[#9220E1] text-white hover:bg-[#7C3AED]"
-                    : "bg-[#FBF9FE] text-[#0A0E31] hover:bg-[#9220E1] hover:text-white"
+                className={`font-geist flex items-center justify-center transition-all duration-300 w-full rounded-[20px] font-medium py-3 text-sm group ${isPopular
+                    ? "bg-[#7C3AED] text-white hover:bg-[#9220E1]"
+                    : "bg-[#FBF9FE] text-[#0A0E31] hover:bg-[#7C3AED] hover:text-white"
                     }`}
             >
                 Get Started
@@ -62,7 +62,7 @@ export function AutomationPricing() {
             <div className="max-w-[1400px] mx-auto">
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <h2 className="font-clash font-medium text-[32px] sm:text-[42px] md:text-[54px] text-[#0A0E31] mb-6 leading-tight">
-                        AI Automation <span className="text-[#9220E1]">Pricing</span>
+                        AI Automation <span className="text-[#7C3AED]">Pricing</span>
                     </h2>
                     <p className="font-geist font-light text-[17px] sm:text-[19px] text-[#0A0E31]/60">
                         Automation pricing depends on workflow complexity and integration depth. We provide customized proposals after workflow analysis.
@@ -107,7 +107,7 @@ export function AutomationPricing() {
 
                 <div className="mt-14 text-center">
                     <button
-                        className="font-geist text-[#9220E1] font-semibold text-[17px] flex items-center mx-auto hover:underline transition-all"
+                        className="font-geist text-[#7C3AED] font-semibold text-[17px] flex items-center mx-auto hover:underline transition-all"
                     >
                         Request Automation Proposal
                     </button>

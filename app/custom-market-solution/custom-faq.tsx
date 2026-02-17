@@ -36,7 +36,7 @@ export function CustomMarketSolutionFAQ() {
             <div className="max-w-[1000px] mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="font-clash font-medium text-[32px] sm:text-[42px] md:text-[54px] text-[#0A0E31] mb-5">
-                        Frequently Asked <span className="text-[#9220E1]">Questions</span>
+                        Frequently Asked <span className="text-[#7C3AED]">Questions</span>
                     </h2>
                 </div>
 
@@ -46,7 +46,7 @@ export function CustomMarketSolutionFAQ() {
                             key={index}
                             className={cn(
                                 "border rounded-[24px] overflow-hidden transition-all duration-300",
-                                openIndex === index ? "border-[#9220E1]/20 bg-[#FBF9FE]" : "border-[#F0F0F0] bg-white hover:border-[#9220E1]/10"
+                                openIndex === index ? "border-[#7C3AED]/20 bg-[#FBF9FE]" : "border-[#F0F0F0] bg-white hover:border-[#7C3AED]/10"
                             )}
                         >
                             <button
@@ -58,7 +58,7 @@ export function CustomMarketSolutionFAQ() {
                                 </span>
                                 <div className={cn(
                                     "size-8 rounded-full flex items-center justify-center shrink-0 transition-colors",
-                                    openIndex === index ? "bg-[#9220E1] text-white" : "bg-[#F0F0F0] text-[#0A0E31]/40"
+                                    openIndex === index ? "bg-[#7C3AED] text-white" : "bg-[#F0F0F0] text-[#0A0E31]/40"
                                 )}>
                                     {openIndex === index ? <Minus size={18} /> : <Plus size={18} />}
                                 </div>

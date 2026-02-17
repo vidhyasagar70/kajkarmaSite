@@ -104,10 +104,10 @@ export function AutomationComparison() {
                         "We evaluate your business model and implement the automation architecture that fits your long-term growth."
                     </p>
                     <button
-                        className="font-geist flex items-center justify-center transition-all duration-200 active:scale-[0.97] bg-[#0A0E31] text-white rounded-full font-medium hover:bg-black shadow-lg"
+                        className="font-geist flex items-center justify-center transition-all duration-200 active:scale-[0.97] bg-[#7C3AED] text-white rounded-full font-medium hover:bg-[#9220E1] shadow-lg shadow-[#7C3AED]/10"
                         style={{
-                            padding: "12px 26px",
-                            fontSize: "15px",
+                            padding: "10px 22px",
+                            fontSize: "14px",
                         }}
                     >
                         Find the Right Automation Platform

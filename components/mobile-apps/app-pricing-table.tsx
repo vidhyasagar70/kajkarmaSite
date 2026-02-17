@@ -82,7 +82,7 @@ export function AppPricingTable() {
 
                             <button
                                 className={`mt-10 rounded-full font-medium transition-all duration-200 flex items-center justify-center gap-2 ${tier.featured
-                                    ? "bg-[#9220E1] text-white hover:bg-[#7C3AED]"
+                                    ? "bg-[#7C3AED] text-white hover:bg-[#9220E1]"
                                     : "bg-[#F8F7FC] text-[#0A0E31] border border-[#F0F0F0] hover:bg-[#9220E1] hover:text-white"
                                     }`}
                                 style={{
@@ -100,7 +100,7 @@ export function AppPricingTable() {
                 {/* CTA Below Table */}
                 <div className="text-center mt-12 sm:mt-16">
                     <button
-                        className="bg-[#9220E1] text-white rounded-full font-medium transition-all shadow-lg shadow-[#9220E1]/10 hover:bg-[#7C3AED]"
+                        className="bg-[#7C3AED] text-white rounded-full font-medium transition-all shadow-lg shadow-[#9220E1]/10 hover:bg-[#9220E1]"
                         style={{
                             padding: "10px 22px",
                             fontSize: "14px",

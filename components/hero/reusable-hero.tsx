@@ -2,12 +2,14 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface HeroButton {
   text: string;
   variant: "primary" | "outline";
   onClick?: () => void;
   href?: string;
+  className?: string;
 }
 
 interface TitleStyles {
@@ -186,20 +188,27 @@ export function ReusableHero({
                 <button
                   key={index}
                   onClick={button.onClick}
-                  className="font-geist flex items-center justify-center gap-2 transition-all duration-200 active:scale-[0.97]"
+                  className={cn(
+                    "font-geist flex items-center justify-center gap-2 transition-all duration-200 active:scale-[0.97]",
+                    button.className
+                  )}
                   style={{
                     padding: isMobile
                       ? "10px 18px"
                       : (buttonSize === "small" ? "10px 22px" : "14px 24px"),
                     borderRadius: "100px",
                     backgroundColor:
-                      button.variant === "primary"
-                        ? "#9220E1"
-                        : "#EBEEFF",
+                      button.className?.includes("bg-")
+                        ? undefined
+                        : button.variant === "primary"
+                          ? "#9220E1"
+                          : "#EBEEFF",
                     color:
-                      button.variant === "primary"
-                        ? "#FFFFFF"
-                        : "#9220E1",
+                      button.className?.includes("text-")
+                        ? undefined
+                        : button.variant === "primary"
+                          ? "#FFFFFF"
+                          : "#9220E1",
                     fontWeight: 500,
                     fontSize: isMobile
                       ? "14px"

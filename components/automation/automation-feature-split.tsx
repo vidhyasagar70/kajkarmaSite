@@ -46,7 +46,7 @@ export function AutomationFeatureSplit({
                             fill
                             className="object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-tr from-[#9220E1]/5 to-transparent pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-[#7C3AED]/5 to-transparent pointer-events-none" />
                     </motion.div>
 
                     {/* Text Column */}
@@ -70,7 +70,7 @@ export function AutomationFeatureSplit({
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 mt-2">
                                     {points.map((point, i) => (
                                         <div key={point} className="flex items-start gap-2.5">
-                                            <div className="size-1.5 rounded-full bg-[#9220E1] mt-2.5 shrink-0" />
+                                            <div className="size-1.5 rounded-full bg-[#7C3AED] mt-2.5 shrink-0" />
                                             <span className="font-geist text-[15px] text-[#0A0E31]/80 font-medium leading-tight">{point}</span>
                                         </div>
                                     ))}
@@ -80,7 +80,7 @@ export function AutomationFeatureSplit({
                             {ctaText && (
                                 <div className="mt-4">
                                     <button
-                                        className="font-geist flex items-center justify-center transition-all duration-200 active:scale-[0.97] bg-[#9220E1] text-white rounded-full font-medium hover:bg-[#7C3AED] shadow-md shadow-[#9220E1]/10"
+                                        className="font-geist flex items-center justify-center transition-all duration-200 active:scale-[0.97] bg-[#7C3AED] text-white rounded-full font-medium hover:bg-[#9220E1] shadow-md shadow-[#7C3AED]/10"
                                         style={{
                                             padding: "10px 22px",
                                             fontSize: "14px",

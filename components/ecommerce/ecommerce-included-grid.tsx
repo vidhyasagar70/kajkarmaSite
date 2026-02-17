@@ -82,9 +82,9 @@ export function EcommerceIncludedGrid() {
                 </div>
 
                 <div className="mt-12 text-center flex flex-col items-center">
-                    <button className="px-10 py-5 bg-[#0A0E31] text-white rounded-full font-semibold text-lg hover:bg-[#130624] transition-all flex items-center gap-3 group">
+                    <button className="px-8 py-3.5 bg-[#7C3AED] text-white rounded-full font-semibold text-base hover:bg-[#9220E1] transition-all flex items-center gap-3 group shadow-lg">
                         Request Full Bundle Breakdown
-                        <Database size={20} className="text-[#9220E1]" />
+                        <Database size={20} className="text-white/80" />
                     </button>
                 </div>
             </div>

@@ -25,7 +25,7 @@ export default function Home() {
 
       {/* Segment 1: Intro */}
       <AutomationFeatureSplit
-        title={<>AI Automation <span className="text-[#9220E1]">& Workflow Engineering</span></>}
+        title={<>AI Automation <span className="text-[#7C3AED]">& Workflow Engineering</span></>}
         description={
           <>
             Manual processes slow growth. Disconnected tools reduce efficiency. Repetitive tasks waste operational bandwidth.
@@ -45,7 +45,7 @@ export default function Home() {
       {/* Segment 2: What is AI Automation? (New Content) */}
       <AutomationFeatureSplit
         reverse
-        title={<>What is <span className="text-[#9220E1]">AI Automation?</span></>}
+        title={<>What is <span className="text-[#7C3AED]">AI Automation?</span></>}
         description={
           <>
             AI automation combines workflow automation tools with artificial intelligence to create intelligent business systems that operate without constant human intervention.
@@ -71,7 +71,7 @@ export default function Home() {
 
       {/* Segment 3: Tools & Technologies We Use */}
       <AutomationSolutionsGrid
-        title={<>Tools & <span className="text-[#9220E1]">Technologies We Use</span></>}
+        title={<>Tools & <span className="text-[#7C3AED]">Technologies We Use</span></>}
         subtitle="We build automation ecosystems using industry-leading tools combined with custom engineering."
         items={[
           {
@@ -107,7 +107,7 @@ export default function Home() {
 
       {/* Segment 4: Business Areas We Automate */}
       <AutomationFeatureSplit
-        title={<>Business Areas <span className="text-[#9220E1]">We Automate</span></>}
+        title={<>Business Areas <span className="text-[#7C3AED]">We Automate</span></>}
         description="Our automation systems are tailored to real business functions, not just simple triggers. We map your operations and automate them end-to-end."
         points={[
           "Sales: Lead capture to Reporting",
@@ -132,7 +132,7 @@ export default function Home() {
 
       {/* Segment 6: AI-Powered Workflows */}
       <AutomationFeatureSplit
-        title={<>AI-Powered <span className="text-[#9220E1]">Intelligent Workflows</span></>}
+        title={<>AI-Powered <span className="text-[#7C3AED]">Intelligent Workflows</span></>}
         description="Beyond traditional automation, we implement AI-powered workflow logic that makes systems smarter over time, transitioning your business from reactive to proactive."
         points={[
           "AI-driven lead scoring",
@@ -149,7 +149,7 @@ export default function Home() {
       {/* Segment 7: Custom Workflow Engineering */}
       <AutomationSolutionsGrid
         dark
-        title={<>Custom Workflow <span className="text-[#9220E1]">Engineering</span></>}
+        title={<>Custom Workflow <span className="text-[#7C3AED]">Engineering</span></>}
         subtitle="Many automation setups fail because they are built without architecture planning. We design for reliability and scale."
         items={[
           {
@@ -172,7 +172,7 @@ export default function Home() {
       {/* Segment 8: Ecommerce Automation */}
       <AutomationFeatureSplit
         reverse
-        title={<>Automation for <span className="text-[#9220E1]">Ecommerce & Marketplaces</span></>}
+        title={<>Automation for <span className="text-[#7C3AED]">Ecommerce & Marketplaces</span></>}
         description="For ecommerce and marketplace operators, automation is critical. We automate multi-vendor commissions, order routing, and more for jewelry and B2B."
         points={[
           "Multi-vendor commission automation",
@@ -188,7 +188,7 @@ export default function Home() {
 
       {/* Segment 9: Benefits Grid */}
       <AutomationSolutionsGrid
-        title={<>Benefits of <span className="text-[#9220E1]">AI Automation</span></>}
+        title={<>Benefits of <span className="text-[#7C3AED]">AI Automation</span></>}
         subtitle="Implementing AI automation provides measurable impact on your business growth and efficiency."
         items={[
           {

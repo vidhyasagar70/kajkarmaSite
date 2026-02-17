@@ -41,7 +41,7 @@ export function AutomationFAQ() {
             <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-12 sm:mb-16">
                     <h2 className="font-clash font-medium text-[32px] sm:text-[42px] md:text-[54px] leading-tight text-[#0A0E31] mb-5">
-                        Frequently <span className="text-[#9220E1]">Asked Questions</span>
+                        Frequently <span className="text-[#7C3AED]">Asked Questions</span>
                     </h2>
                     <p className="font-geist font-light text-[17px] sm:text-[19px] text-[#0A0E31]/60">
                         Everything you need to know about our automation services.
@@ -61,8 +61,8 @@ export function AutomationFAQ() {
                                 className={cn(
                                     "rounded-[28px] border transition-all duration-300",
                                     isOpen
-                                        ? "bg-[#FBF9FE] border-[#9220E1]/20 shadow-md shadow-[#9220E1]/5"
-                                        : "bg-white border-[#F0F0F0] hover:border-[#9220E1]/10"
+                                        ? "bg-[#FBF9FE] border-[#7C3AED]/20 shadow-md shadow-[#7C3AED]/5"
+                                        : "bg-white border-[#F0F0F0] hover:border-[#7C3AED]/10"
                                 )}
                             >
                                 <button
@@ -71,13 +71,13 @@ export function AutomationFAQ() {
                                 >
                                     <span className={cn(
                                         "font-clash font-medium text-[17px] sm:text-[19px] md:text-[21px] transition-colors duration-300",
-                                        isOpen ? "text-[#9220E1]" : "text-[#0A0E31] group-hover:text-[#9220E1]"
+                                        isOpen ? "text-[#7C3AED]" : "text-[#0A0E31] group-hover:text-[#7C3AED]"
                                     )}>
                                         {faq.question}
                                     </span>
                                     <div className={cn(
                                         "size-9 rounded-full flex items-center justify-center shrink-0 transition-all duration-300",
-                                        isOpen ? "bg-[#9220E1] text-white rotate-180" : "bg-[#FBF9FE] text-[#0A0E31]"
+                                        isOpen ? "bg-[#7C3AED] text-white rotate-180" : "bg-[#FBF9FE] text-[#0A0E31]"
                                     )}>
                                         {isOpen ? <Minus size={16} /> : <Plus size={16} />}
                                     </div>
@@ -107,7 +107,7 @@ export function AutomationFAQ() {
 
                 <div className="mt-16 text-center">
                     <button
-                        className="font-geist flex items-center mx-auto text-[#9220E1] font-semibold text-[17px] hover:underline transition-all"
+                        className="font-geist flex items-center mx-auto text-[#7C3AED] font-semibold text-[17px] hover:underline transition-all"
                     >
                         Have More Questions? Speak With Our Team
                     </button>

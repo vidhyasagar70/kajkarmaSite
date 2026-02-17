@@ -21,7 +21,7 @@ export function MobileAppsHero() {
                 maxWidth: "1100px",
             }}
             buttons={[
-                { text: "Start Your Project", variant: "primary" },
+                { text: "Start Your Project", variant: "primary", className: "bg-[#7C3AED] hover:bg-white hover:text-[#7C3AED] transition-all" },
                 { text: "View Our Work", variant: "outline" },
             ]}
             buttonSize="small"

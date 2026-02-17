@@ -47,7 +47,7 @@ export function EcommerceMaintenanceSection() {
                                 Extended maintenance plans are available for ongoing growth.
                             </p>
 
-                            <button className="w-fit px-10 py-5 bg-white text-[#130624] rounded-full font-semibold text-lg hover:bg-[#9220E1] hover:text-white transition-all shadow-xl flex items-center gap-3 group">
+                            <button className="w-fit px-8 py-3.5 bg-white text-[#130624] rounded-full font-semibold text-base hover:bg-[#9220E1] hover:text-white transition-all shadow-xl flex items-center gap-3 group">
                                 Secure Your 6-Month Support Plan
                                 <MessageCircle size={22} className="group-hover:rotate-12 transition-transform" />
                             </button>

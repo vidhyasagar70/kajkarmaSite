@@ -40,7 +40,7 @@ export function MaintenanceSection() {
                         </p>
 
                         <button
-                            className="w-fit bg-[#9220E1] text-white rounded-full font-medium hover:bg-[#7C3AED] transition-all flex items-center gap-2 group shadow-md shadow-[#9220E1]/10"
+                            className="w-fit bg-[#7C3AED] text-white rounded-full font-medium hover:bg-[#7C3AED] transition-all flex items-center gap-2 group shadow-md shadow-[#9220E1]/10"
                             style={{
                                 padding: "10px 22px",
                                 fontSize: "14px",

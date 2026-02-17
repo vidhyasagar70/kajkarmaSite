@@ -132,7 +132,7 @@ function StackingCard({ card, index, totalCards }: StackingCardProps) {
 
       const rect = cardRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      
+
       // For mobile: check if card is in center of viewport
       if (isMobile) {
         const cardCenter = rect.top + rect.height / 2;
@@ -179,7 +179,7 @@ function StackingCard({ card, index, totalCards }: StackingCardProps) {
             background: "linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(255, 255, 255, 0.02) 75%, rgba(255, 255, 255, 0.04) 100%)",
           }}
         />
-        
+
         {/* Mobile Layout */}
         <div className="flex flex-col lg:hidden p-5 md:p-6 relative z-10 gap-6">
           {/* Title */}
@@ -195,13 +195,13 @@ function StackingCard({ card, index, totalCards }: StackingCardProps) {
           </h3>
 
           {/* Image */}
-          <div 
+          <div
             className="self-center relative"
             onTouchStart={() => setIsImageHovered(true)}
             onTouchEnd={() => setIsImageHovered(false)}
           >
             {/* L-shaped border - flush with image edge */}
-            <div 
+            <div
               className="absolute pointer-events-none"
               style={{
                 top: "0px",
@@ -214,21 +214,21 @@ function StackingCard({ card, index, totalCards }: StackingCardProps) {
               }}
             >
               <div
-                className="absolute top-0 left-0 h-[4px] bg-[#E85A3C]"
+                className="absolute top-0 left-0 h-[4px] bg-[#7C3AED]"
                 style={{
                   width: showBorder ? "100%" : "0%",
                   transition: "width 0.3s ease-out",
                 }}
               />
               <div
-                className="absolute top-0 left-0 w-[4px] bg-[#E85A3C]"
+                className="absolute top-0 left-0 w-[4px] bg-[#7C3AED]"
                 style={{
                   height: showBorder ? "100%" : "0%",
                   transition: "height 0.3s ease-out",
                 }}
               />
             </div>
-            
+
             <div
               className="relative overflow-hidden"
               style={{
@@ -285,7 +285,7 @@ function StackingCard({ card, index, totalCards }: StackingCardProps) {
               paddingLeft: "20px",
               paddingRight: "20px",
               fontSize: "13px",
-              backgroundColor: isButtonHovered ? "#E85A3C" : "transparent",
+              backgroundColor: isButtonHovered ? "#9220E1" : "transparent",
               transition: "background-color 0.3s ease-out",
             }}
             onMouseEnter={() => setIsButtonHovered(true)}
@@ -338,13 +338,13 @@ function StackingCard({ card, index, totalCards }: StackingCardProps) {
           </div>
 
           {/* Center - Image */}
-          <div 
+          <div
             className="flex-shrink-0 self-center relative"
             onMouseEnter={() => setIsImageHovered(true)}
             onMouseLeave={() => setIsImageHovered(false)}
           >
             {/* L-shaped border - flush with image edge */}
-            <div 
+            <div
               className="absolute pointer-events-none"
               style={{
                 top: "0px",
@@ -357,21 +357,21 @@ function StackingCard({ card, index, totalCards }: StackingCardProps) {
               }}
             >
               <div
-                className="absolute top-0 left-0 h-[4px] bg-[#E85A3C]"
+                className="absolute top-0 left-0 h-[4px] bg-[#7C3AED]"
                 style={{
                   width: isImageHovered ? "100%" : "0%",
                   transition: "width 0.3s ease-out",
                 }}
               />
               <div
-                className="absolute top-0 left-0 w-[4px] bg-[#E85A3C]"
+                className="absolute top-0 left-0 w-[4px] bg-[#7C3AED]"
                 style={{
                   height: isImageHovered ? "100%" : "0%",
                   transition: "height 0.3s ease-out",
                 }}
               />
             </div>
-            
+
             <div
               className="relative overflow-hidden"
               style={{
@@ -412,14 +412,14 @@ function StackingCard({ card, index, totalCards }: StackingCardProps) {
             <button
               className="relative flex items-center justify-center font-geist font-medium border border-white/30 overflow-hidden"
               style={{
-                height: "48px",
+                height: "42px",
                 borderRadius: "1000px",
-                paddingLeft: "28px",
-                paddingRight: "28px",
-                fontSize: "15px",
-                backgroundColor: isButtonHovered ? "#E85A3C" : "transparent",
+                paddingLeft: "24px",
+                paddingRight: "24px",
+                fontSize: "14px",
+                backgroundColor: isButtonHovered ? "#9220E1" : "transparent",
                 transition: "background-color 0.3s ease-out",
-                minWidth: "240px",
+                minWidth: "200px",
               }}
               onMouseEnter={() => setIsButtonHovered(true)}
               onMouseLeave={() => setIsButtonHovered(false)}

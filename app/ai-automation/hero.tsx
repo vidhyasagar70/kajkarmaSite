@@ -23,7 +23,7 @@ export function Hero() {
         maxWidth: "948px",
       }}
       buttons={[
-        { text: "Connect With Us", variant: "primary" },
+        { text: "Connect With Us", variant: "primary", className: "bg-[#7C3AED] hover:bg-white hover:text-[#7C3AED] transition-all" },
         { text: "Find Your Perfect Mix", variant: "outline" },
       ]}
     />

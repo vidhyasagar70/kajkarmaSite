@@ -60,7 +60,7 @@ export function SplitServiceSection({
                         <button
                             className={`w-fit mt-4 rounded-full font-medium transition-all flex items-center gap-2 group ${isDark
                                 ? "bg-[#9220E1] text-white hover:bg-[#7C3AED]"
-                                : "bg-[#F8F7FC] text-[#0A0E31] border border-[#F0F0F0] hover:bg-[#9220E1] hover:text-white"
+                                : "bg-[#7C3AED] text-white border border-[#F0F0F0] hover:bg-[#9220E1] hover:text-white"
                                 }`}
                             style={{
                                 padding: "10px 22px",

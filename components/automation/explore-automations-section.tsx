@@ -53,7 +53,7 @@ export function ExploreAutomationsSection() {
             aria-label="Previous"
           >
             <svg viewBox="0 0 24 24" fill="none" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20">
-              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
 
@@ -63,21 +63,20 @@ export function ExploreAutomationsSection() {
               const isActive = item.position === 0;
               const isAdjacent = Math.abs(item.position) === 1;
               const isOuter = Math.abs(item.position) >= 2;
-              
+
               return (
                 <div
                   key={`${item.id}-${item.position}`}
                   onClick={() => setActiveIndex(item.originalIndex)}
-                  className={`flex-shrink-0 cursor-pointer transition-all duration-500 ease-out ${
-                    isActive 
-                      ? "w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] md:w-[300px] md:h-[300px] lg:w-[320px] lg:h-[320px] z-10" 
+                  className={`flex-shrink-0 cursor-pointer transition-all duration-500 ease-out ${isActive
+                      ? "w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] md:w-[300px] md:h-[300px] lg:w-[320px] lg:h-[320px] z-10"
                       : isAdjacent
                         ? "w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px]"
                         : "w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] lg:w-[180px] lg:h-[180px]"
-                  } ${isOuter ? "hidden sm:block" : ""}`}
+                    } ${isOuter ? "hidden sm:block" : ""}`}
                 >
-                  <div className="relative w-full h-full rounded-[20px] overflow-hidden transition-all duration-500 border border-[#3D2A5C]">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#E8E0F0] to-[#D0C4E0]" />
+                  <div className="relative w-full h-full rounded-[20px] overflow-hidden transition-all duration-500 border border-[#7C3AED]/20">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#7C3AED]/10 to-[#7C3AED]/5" />
                     <Image
                       src={item.image}
                       alt={item.title}
@@ -104,7 +103,7 @@ export function ExploreAutomationsSection() {
             aria-label="Next"
           >
             <svg viewBox="0 0 24 24" fill="none" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20">
-              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         </div>

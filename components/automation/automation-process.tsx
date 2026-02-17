@@ -120,7 +120,7 @@ export function AutomationProcess() {
         return (
             <section className="w-full bg-[#FBF9FE] py-12 px-4">
                 <h2 className="font-clash font-medium text-[32px] leading-[1] text-[#0A0E31] mb-10">
-                    Product <span className="text-[#9220E1]">Approach</span>
+                    Product <span className="text-[#7C3AED]">Approach</span>
                 </h2>
 
                 <div className="flex flex-col gap-8">
@@ -140,7 +140,7 @@ export function AutomationProcess() {
                                     {step.number}
                                 </p>
 
-                                <h3 className="font-clash font-medium text-[24px] leading-[1.1] text-[#9220E1] mb-1">
+                                <h3 className="font-clash font-medium text-[24px] leading-[1.1] text-[#7C3AED] mb-1">
                                     {step.title}
                                 </h3>
 
@@ -162,9 +162,8 @@ export function AutomationProcess() {
         <div ref={containerRef} className="relative" style={{ height: "300vh" }}>
             <div className="sticky top-0 h-[800px] w-full bg-[#FBF9FE] overflow-hidden">
                 <div className="h-full py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-[72px]">
-                    {/* Heading */}
                     <h2 className="font-clash font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-[1] lg:leading-[54px] text-[#0A0E31] mb-20">
-                        Product <span className="text-[#9220E1]">Approach</span>
+                        Product <span className="text-[#7C3AED]">Approach</span>
                     </h2>
 
                     {/* Roadmap Container */}
@@ -192,8 +191,8 @@ export function AutomationProcess() {
                             <div
                                 key={index}
                                 className={`absolute flex flex-col items-start transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${visibleSteps.includes(index)
-                                        ? "opacity-100 scale-100"
-                                        : "opacity-0 scale-75"
+                                    ? "opacity-100 scale-100"
+                                    : "opacity-0 scale-75"
                                     }`}
                                 style={{
                                     top: positions.circles[index].top,
@@ -203,8 +202,8 @@ export function AutomationProcess() {
                                 {/* Circle */}
                                 <div
                                     className={`relative transition-all duration-[1400ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] ${visibleSteps.includes(index)
-                                            ? "scale-100 opacity-100"
-                                            : "scale-0 opacity-0"
+                                        ? "scale-100 opacity-100"
+                                        : "scale-0 opacity-0"
                                         }`}
                                     style={{
                                         width: "clamp(80px, 10vw, 152px)",
@@ -222,8 +221,8 @@ export function AutomationProcess() {
                                 {/* Text */}
                                 <div
                                     className={`absolute transition-all duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${visibleSteps.includes(index)
-                                            ? "opacity-100 translate-y-0"
-                                            : "opacity-0 translate-y-8"
+                                        ? "opacity-100 translate-y-0"
+                                        : "opacity-0 translate-y-8"
                                         }`}
                                     style={{
                                         width: "clamp(150px, 16vw, 224px)",
@@ -242,7 +241,7 @@ export function AutomationProcess() {
                                     </p>
 
                                     <h3
-                                        className="font-clash font-medium text-[#9220E1] mb-2"
+                                        className="font-clash font-medium text-[#7C3AED] mb-2"
                                         style={{ fontSize: "clamp(10px, 2.3vw, 40px)" }}
                                     >
                                         {step.title}

@@ -56,7 +56,7 @@ export function PlatformGrid() {
                             </div>
 
                             <button
-                                className="w-fit mt-4 bg-[#9220E1] text-white rounded-full font-medium transition-all flex items-center gap-2 group shadow-md shadow-[#9220E1]/10 hover:bg-[#7C3AED]"
+                                className="w-fit mt-4 bg-[#7C3AED] text-white text-white rounded-full font-medium transition-all flex items-center gap-2 group shadow-md shadow-[#9220E1]/10 hover:bg-[#9220E1]"
                                 style={{
                                     padding: "10px 22px",
                                     fontSize: "14px",

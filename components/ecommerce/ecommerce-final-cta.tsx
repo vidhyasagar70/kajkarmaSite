@@ -19,7 +19,7 @@ export function EcommerceFinalCTA() {
 
                 <div className="flex flex-col sm:flex-row gap-6">
                     <button
-                        className="bg-[#9220E1] text-white rounded-full font-medium transition-all flex items-center gap-3 group shadow-[0_0_30px_rgba(146,32,225,0.2)] hover:bg-[#7C3AED]"
+                        className="bg-[#7C3AED] text-white rounded-full font-medium transition-all flex items-center gap-3 group shadow-[0_0_30px_rgba(124,58,237,0.2)] hover:bg-[#9220E1]"
                         style={{
                             padding: "10px 22px",
                             fontSize: "14px",

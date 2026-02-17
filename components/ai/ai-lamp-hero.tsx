@@ -5,16 +5,16 @@ import { LampBackgroundAnimation } from "./lamp-background-animation";
 export function AILampHero() {
   return (
     <div className="w-full bg-white py-3 sm:py-4 md:py-6 lg:py-8 px-3 sm:px-4 md:px-10 lg:px-20 xl:px-28">
-      <section 
+      <section
         className="relative w-full overflow-hidden mx-auto bg-[#0C081E] rounded-2xl md:rounded-3xl max-w-[1400px]"
       >
         {/* Background images - these determine the height */}
         <LampBackgroundAnimation />
-        
+
         {/* Content overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-5 md:px-6 py-8 sm:py-10 md:py-12 lg:py-[50px]">
           {/* Badge */}
-          <div 
+          <div
             className="font-inter font-medium text-[10px] sm:text-[11px] md:text-xs leading-5 text-center text-white/85 py-1 px-3 sm:px-4 md:px-5 rounded-full border border-white/20 bg-white/5 backdrop-blur-[10px] mb-4 sm:mb-5 md:mb-6"
           >
             Less than a coffee per day

@@ -273,7 +273,7 @@ export function AppProcessHorizontal() {
                     className="font-clash font-medium leading-[1.1] text-[#9220E1] mb-2"
                     style={{
                       fontSize:
-                        "clamp(20px, 2.8vw, 40px)",
+                        "clamp(10px, 2.1vw, 40px)",
                     }}
                   >
                     {step.title}

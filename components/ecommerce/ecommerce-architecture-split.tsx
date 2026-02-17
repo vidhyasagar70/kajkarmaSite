@@ -67,7 +67,7 @@ export function EcommerceArchitectureSplit() {
                 </div>
 
                 <div className="mt-16 flex flex-col items-center">
-                    <button className="px-10 py-5 bg-[#7C3AED] text-white rounded-full font-semibold text-lg hover:bg-[#6D28D9] transition-all flex items-center gap-3">
+                    <button className="px-8 py-3.5 bg-[#7C3AED] text-white rounded-full font-semibold text-base hover:bg-[#9220E1] transition-all flex items-center gap-3 shadow-lg">
                         Discuss Your Architecture Requirements
                         <Layers size={20} />
                     </button>

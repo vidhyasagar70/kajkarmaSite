@@ -28,7 +28,7 @@ export function EcommercePerformanceGrid() {
                             Our ecommerce systems are built to handle traffic growth, product expansion, and operational complexity without compromising performance.
                         </p>
 
-                        <button className="w-fit px-8 py-4 bg-[#7C3AED] text-white rounded-full font-semibold text-lg hover:bg-[#6D28D9] transition-all shadow-lg">
+                        <button className="w-fit px-8 py-3.5 bg-[#7C3AED] text-white rounded-full font-semibold text-base hover:bg-[#9220E1] transition-all shadow-lg">
                             Build a Scalable Ecommerce System
                         </button>
                     </div>
