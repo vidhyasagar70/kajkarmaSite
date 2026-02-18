@@ -32,6 +32,7 @@ export function Navbar({ blogs = [] }: NavbarProps) {
         { label: "Home", href: "/" },
         { label: "About Us", href: "#" },
         { label: "Our Services", href: "#", key: "services" },
+        { label: "Blog", href: "/blog" },
         { label: "Resources", href: "#", key: "resources" },
     ]
 

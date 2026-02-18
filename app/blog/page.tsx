@@ -1,38 +1,22 @@
-import { client } from "@/sanity/lib/client";
-import { isSanityConfigured } from "@/sanity/env";
-import imageUrlBuilder from "@sanity/image-url";
+import { connectToDatabase } from "@/lib/mongodb";
+import { Blog } from "@/lib/models/Blog";
 import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/navbar/navbar";
 import { FooterSection } from "@/components/footer/footer-section";
 
-const builder = imageUrlBuilder(client);
-
-function urlFor(source: any) {
-  return builder.image(source);
-}
-
 async function getBlogs() {
-  if (!isSanityConfigured) {
-    return [];
-  }
-  
   try {
-    const query = `*[_type == "blog"] | order(publishedAt asc) {
-      _id,
-      title,
-      slug,
-      category->{
-        _id,
-        title,
-        slug
-      },
-      image,
-      description
-    }`;
-    return await client.fetch(query);
+    await connectToDatabase();
+    const blogs = await Blog.find({ published: true }).sort({ createdAt: -1 }).lean();
+    return blogs.map(blog => ({
+      ...blog,
+      _id: blog._id.toString(),
+      createdAt: blog.createdAt.toISOString(),
+      updatedAt: blog.updatedAt.toISOString(),
+    }));
   } catch (error) {
-    console.warn('Sanity CMS not configured or error fetching blogs:', error);
+    console.warn('Error fetching blogs:', error);
     return [];
   }
 }
@@ -65,9 +49,10 @@ export default async function BlogListPage() {
               style={{ gap: "30px" }}
             >
               {blogs.map((blog: any) => (
-                <div
+                <Link
                   key={blog._id}
-                  className="flex flex-col"
+                  href={`/blog/${blog.slug}`}
+                  className="flex flex-col hover:opacity-80 transition-opacity"
                   style={{ gap: "24px" }}
                 >
                   {/* Image */}
@@ -78,9 +63,9 @@ export default async function BlogListPage() {
                       borderRadius: "18px",
                     }}
                   >
-                    {blog.image ? (
+                    {blog.featuredImage ? (
                       <Image
-                        src={urlFor(blog.image).width(414).height(288).url()}
+                        src={blog.featuredImage}
                         alt={blog.title}
                         fill
                         className="object-cover rounded-[18px]"
@@ -94,19 +79,6 @@ export default async function BlogListPage() {
 
                   {/* Content */}
                   <div className="flex flex-col" style={{ gap: "12px" }}>
-                    {/* Category */}
-                    {blog.category && (
-                      <span
-                        className="inline-block w-fit px-3 py-1 rounded-full text-xs font-medium"
-                        style={{
-                          backgroundColor: "rgba(146, 32, 225, 0.1)",
-                          color: "#9220E1",
-                        }}
-                      >
-                        {blog.category.title}
-                      </span>
-                    )}
-
                     {/* Title */}
                     <h3
                       className="font-clash"
@@ -121,23 +93,24 @@ export default async function BlogListPage() {
                       {blog.title}
                     </h3>
 
-                    {/* Description */}
-                    <p
-                      className="font-geist"
-                      style={{
-                        fontWeight: 400,
-                        fontSize: "20px",
-                        lineHeight: "120%",
-                        letterSpacing: "0.02em",
-                        color: "rgba(0, 0, 0, 0.75)",
-                      }}
-                    >
-                      {blog.description}
-                    </p>
+                    {/* Subtitle */}
+                    {blog.subtitle && (
+                      <p
+                        className="font-geist"
+                        style={{
+                          fontWeight: 400,
+                          fontSize: "20px",
+                          lineHeight: "120%",
+                          letterSpacing: "0.02em",
+                          color: "rgba(0, 0, 0, 0.75)",
+                        }}
+                      >
+                        {blog.subtitle}
+                      </p>
+                    )}
 
                     {/* Learn More */}
-                    <Link
-                      href={`/blog/${blog.slug?.current || ""}`}
+                    <span
                       className="inline-flex items-center gap-1"
                       style={{
                         fontFamily: "Roboto, sans-serif",
@@ -163,9 +136,9 @@ export default async function BlogListPage() {
                         <line x1="7" y1="17" x2="17" y2="7" />
                         <polyline points="7 7 17 7 17 17" />
                       </svg>
-                    </Link>
+                    </span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           ) : (

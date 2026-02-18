@@ -1,41 +1,13 @@
 import { NextResponse } from 'next/server';
-import { client } from '@/sanity/lib/client';
-import { isSanityConfigured } from '@/sanity/env';
-import imageUrlBuilder from '@sanity/image-url';
-
-const builder = imageUrlBuilder(client);
-
-function urlFor(source: any) {
-  return builder.image(source).width(160).height(110).url();
-}
+import { connectToDatabase } from '@/lib/mongodb';
+import { Blog } from '@/lib/models/Blog';
 
 export async function GET() {
-  if (!isSanityConfigured) {
-    return NextResponse.json({ blogs: [] });
-  }
-  
   try {
-    const query = `*[_type == "blog"] | order(coalesce(publishedAt, _createdAt) desc)[0...5] {
-      _id,
-      title,
-      slug,
-      image,
-      publishedAt,
-      _createdAt,
-      category->{
-        title
-      }
-    }`;
+    await connectToDatabase();
+    const blogs = await Blog.find({ published: true }).sort({ createdAt: -1 }).limit(5);
     
-    const blogs = await client.fetch(query);
-    
-    // Transform blogs to include image URLs
-    const transformedBlogs = blogs.map((blog: any) => ({
-      ...blog,
-      image: blog.image ? urlFor(blog.image) : null,
-    }));
-
-    return NextResponse.json({ blogs: transformedBlogs });
+    return NextResponse.json({ blogs });
   } catch (error) {
     console.error('Failed to fetch blogs:', error);
     return NextResponse.json({ blogs: [] });

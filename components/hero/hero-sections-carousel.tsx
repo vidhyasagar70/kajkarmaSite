@@ -1,15 +1,17 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { WhiteLabelHero } from './white-label-hero';
+import { PlainBannerHero } from './plain-banner-hero';
+// import { WhiteLabelHero } from './white-label-hero';
 import { AIAutomationHero } from './ai-automation-hero';
 import { WhatsAppAutomationHero } from './whatsapp-automation-hero';
 import { EvaluationBanner } from '../banner/evaluation-banner';
 
 const heroSlides = [
-  { id: 0, component: WhiteLabelHero },
-  { id: 1, component: AIAutomationHero },
-  { id: 2, component: WhatsAppAutomationHero },
+  { id: 0, component: PlainBannerHero },
+  // { id: 1, component: WhiteLabelHero },
+  { id: 2, component: AIAutomationHero },
+  { id: 3, component: WhatsAppAutomationHero },
 ];
 
 export function HeroSectionsCarousel() {
@@ -17,7 +19,7 @@ export function HeroSectionsCarousel() {
 
   useEffect(() => {
     // Preload images using link tags for faster loading
-    const preloadImages = ['/heero.svg', '/robott.svg', '/whatsappp.svg'];
+    const preloadImages = ['/banner/newbanner.jpeg', '/heero.svg', '/robott.svg', '/whatsappp.svg'];
     
     preloadImages.forEach((src) => {
       const link = document.createElement('link');

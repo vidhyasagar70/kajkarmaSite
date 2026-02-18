@@ -7,15 +7,20 @@ interface EvaluationBannerProps {
 }
 
 export function EvaluationBanner({ currentSlide = 0 }: EvaluationBannerProps) {
-    const isWhatsAppSlide = currentSlide === 2;
+    // Don't show banner for plain banner hero (slide 0)
+    if (currentSlide === 0) {
+        return null;
+    }
+    
+    const isWhatsAppSlide = currentSlide === 3;
     
     const getBannerContent = () => {
-      if (currentSlide === 0) {
+      if (currentSlide === 1) {
         return {
           text: "Looking for a White Label Partner?",
           href: "/contact"
         };
-      } else if (currentSlide === 1) {
+      } else if (currentSlide === 2) {
         return {
           text: "Get Your Website Evaluated →",
           href: "/contact"

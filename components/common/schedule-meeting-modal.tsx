@@ -438,7 +438,7 @@ export function ScheduleMeetingModal({ isOpen, onClose }: ScheduleMeetingModalPr
                     {/* Left Side: Professional Image & Branding */}
                     <div className="relative hidden lg:block lg:w-[40%] bg-[#110B3B] overflow-hidden">
                         <Image
-                            src="/company-profile/company-popup-rightimage.webp"
+                            src="/popup/popup.jpg"
                             alt="Company Branding"
                             fill
                             className="object-cover"
