@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { client } from "@/sanity/lib/client";
+import { isSanityConfigured } from "@/sanity/env";
 import imageUrlBuilder from "@sanity/image-url";
 
 const builder = imageUrlBuilder(client);
@@ -101,6 +102,14 @@ export function BlogsSection() {
 
   useEffect(() => {
     async function fetchData() {
+      // If Sanity is not configured, use fallback data
+      if (!isSanityConfigured) {
+        setCategories(fallbackCategories);
+        setBlogs(fallbackBlogs);
+        setLoading(false);
+        return;
+      }
+      
       try {
         // Fetch categories
         const categoriesQuery = `*[_type == "category"] | order(_createdAt asc) {

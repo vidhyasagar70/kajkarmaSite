@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { client } from '@/sanity/lib/client';
+import { isSanityConfigured } from '@/sanity/env';
 import imageUrlBuilder from '@sanity/image-url';
 
 const builder = imageUrlBuilder(client);
@@ -9,6 +10,10 @@ function urlFor(source: any) {
 }
 
 export async function GET() {
+  if (!isSanityConfigured) {
+    return NextResponse.json({ blogs: [] });
+  }
+  
   try {
     const query = `*[_type == "blog"] | order(coalesce(publishedAt, _createdAt) desc)[0...5] {
       _id,

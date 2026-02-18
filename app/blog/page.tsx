@@ -1,4 +1,5 @@
 import { client } from "@/sanity/lib/client";
+import { isSanityConfigured } from "@/sanity/env";
 import imageUrlBuilder from "@sanity/image-url";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,19 +13,28 @@ function urlFor(source: any) {
 }
 
 async function getBlogs() {
-  const query = `*[_type == "blog"] | order(publishedAt asc) {
-    _id,
-    title,
-    slug,
-    category->{
+  if (!isSanityConfigured) {
+    return [];
+  }
+  
+  try {
+    const query = `*[_type == "blog"] | order(publishedAt asc) {
       _id,
       title,
-      slug
-    },
-    image,
-    description
-  }`;
-  return client.fetch(query);
+      slug,
+      category->{
+        _id,
+        title,
+        slug
+      },
+      image,
+      description
+    }`;
+    return await client.fetch(query);
+  } catch (error) {
+    console.warn('Sanity CMS not configured or error fetching blogs:', error);
+    return [];
+  }
 }
 
 export default async function BlogListPage() {
