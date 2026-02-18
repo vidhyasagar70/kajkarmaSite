@@ -12,29 +12,30 @@ interface ServiceCard {
 
 const services: ServiceCard[] = [
   {
+    title: "Web & App Development",
+    image: "/kajkarmaimages/webdev.jpg",
+    gradient: "from-blue-600 via-indigo-500 to-purple-600",
+  },
+  {
     title: "Intelligent AI and Automation Systems",
-    image: "/services/ai-automation.png",
+    image: "/kajkarmaimages/artboard10.jpg",
     gradient: "from-purple-900 via-purple-700 to-purple-500",
     isWide: true,
   },
   {
     title: "Complete Marketing Ecosystem",
-    image: "/services/marketing.png",
+    image: "/kajkarmaimages/artboard11social.jpg",
     gradient: "from-purple-400 via-pink-300 to-purple-500",
   },
   {
     title: "Creative Design & Branding",
-    image: "/services/branding.png",
+    image: "/kajkarmaimages/marketplaceplatformdevelopment.jpg",
     gradient: "from-gray-100 via-purple-100 to-gray-200",
   },
-  {
-    title: "Web & App Development",
-    image: "/services/development.png",
-    gradient: "from-blue-600 via-indigo-500 to-purple-600",
-  },
+  
   {
     title: "SEO & Content Strategy",
-    image: "/services/seo.png",
+    image: "/kajkarmaimages/seo.jpg",
     gradient: "from-green-500 via-teal-400 to-cyan-500",
   },
 ];
@@ -221,7 +222,7 @@ export function OurServices() {
                 className="flex-shrink-0"
                 style={{
                   width: service.isWide 
-                    ? 'clamp(280px, 45vw, 620px)' 
+                    ? 'clamp(200px, 32vw, 420px)' 
                     : 'clamp(200px, 32vw, 420px)',
                 }}
               >

@@ -12,22 +12,22 @@ const solutions: SolutionCard[] = [
     {
         title: "Ecommerce Application Development",
         description: "Custom ecommerce platforms, Shopify integrations, headless commerce systems, subscription models, and B2B portals designed for conversion and operational efficiency.",
-        image: "/what.png",
+        image: "/kajkarmaimages/ecomsolution.jpg ",
     },
     {
         title: "Marketplace Platform Development",
         description: "Multi-vendor marketplaces with seller dashboards, commission engines, role-based access control, and secure payment architecture built for expansion.",
-        image: "/Rectangle 5243 (3).svg",
+        image: "/kajkarmaimages/marketplaceplatformdevelopment.jpg",
     },
     {
         title: "Jewelry & Diamond Industry Applications",
         description: "Inventory search systems, real-time pricing tools, B2B trading portals, RapNet integrations, and buyer management systems tailored for the diamond and jewelry industry.",
-        image: "/do.svg",
+        image: "/kajkarmaimages/jimages.jpg",
     },
     {
         title: "Custom Business & SaaS Applications",
         description: "CRM systems, internal dashboards, booking platforms, automation tools, and scalable SaaS products designed for operational growth.",
-        image: "/page14.png",
+        image: "/kajkarmaimages/cwd.jpg",
     },
 ];
 
@@ -57,12 +57,12 @@ export function AppSolutionsGrid() {
                             className="flex flex-col gap-6 group"
                         >
                             {/* Image Container */}
-                            <div className="relative w-full aspect-[16/9] rounded-[24px] overflow-hidden bg-[#F8F7FC]">
+                            <div className="relative w-full aspect-[16/9] rounded-[0px] overflow-hidden bg-[#F8F7FC]">
                                 <Image
                                     src={solution.image}
                                     alt={solution.title}
                                     fill
-                                    className="object-contain transition-transform duration-500 group-hover:scale-105"
+                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
 

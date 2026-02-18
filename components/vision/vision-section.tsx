@@ -19,7 +19,7 @@ const visionCards: VisionCard[] = [
         tag: "Ecommerce Solutions",
         title: "High-Converting Ecommerce Platforms",
         description: "Custom ecommerce applications and Shopify stores engineered for speed, conversion, and seamless user experience. We build revenue-driven systems — not just online stores.",
-        image: "/page11.png",
+        image: "/kajkarmaimages/ecomsolution.jpg",
         linkText: "Build Your Ecommerce",
         linkHref: "#",
     },
@@ -28,16 +28,16 @@ const visionCards: VisionCard[] = [
         tag: "Marketplace Development",
         title: "Marketplace & Multi-Vendor Development",
         description: "Launch powerful marketplace platforms with vendor dashboards, commission systems, and scalable backend infrastructure — built to support rapid expansion and secure transactions.",
-        image: "/page7.png",
+        image: "/kajkarmaimages/marketplace.jpg",
         linkText: "Launch Your Marketplace",
         linkHref: "#",
     },
     {
         id: 3,
-        tag: "Product Engineering",
+        tag: "Producproductt Engineering",
         title: "Build Scalable Digital Products",
         description: "We design and develop custom web applications, SaaS platforms, and enterprise systems built for long-term scalability. From architecture planning to deployment, we engineer digital products that perform under growth.",
-        image: "/page10.png",
+        image: "/kajkarmaimages/product.jpg",
         linkText: "Explore Product Development",
         linkHref: "#",
     },
@@ -46,7 +46,7 @@ const visionCards: VisionCard[] = [
         tag: "Growth Strategy",
         title: "AI-Driven SEO & Market Research",
         description: "We combine technical SEO, competitor intelligence, and AI-powered keyword research to ensure every website and application is built for organic growth from day one.",
-        image: "/page14.png",
+        image: "/kajkarmaimages/seo2.jpg",
         linkText: "Unlock Growth Strategy",
         linkHref: "#",
     },
@@ -151,7 +151,7 @@ function VisionStackingCard({ card, index, totalCards }: VisionStackingCardProps
                 onMouseEnter={() => !isMobile && setIsCardHovered(true)}
                 onMouseLeave={() => !isMobile && setIsCardHovered(false)}
             >
-                <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-20 p-4 lg:p-12 min-h-[600px]">
+                <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-20 p-4 lg:p-12 lg:mb-0 lg:pb-0 min-h-[600px]">
                     {/* Left Column - Image Square */}
                     <div
                         className="w-full lg:w-[400px] xl:w-[450px] aspect-square relative flex-shrink-0 transition-transform duration-700 ease-out"
@@ -160,21 +160,21 @@ function VisionStackingCard({ card, index, totalCards }: VisionStackingCardProps
                             transform: (isMobile ? isInView : isCardHovered) ? "scale(1.02)" : "scale(1)",
                         }}
                     >
-                        <div className="absolute inset-0 p-8 lg:p-12 flex items-center justify-center">
+                        {/* <div className=" absolute inset-0 p-0 lg:p-12 flex items-center justify-center">
                             <div
-                                className="relative w-full h-full transition-all duration-700"
+                                className="relative w-[1400px] h-full transition-all duration-700"
                                 style={{
                                     transform: (isMobile ? isInView : isCardHovered) ? "translateY(-10px)" : "translateY(0)",
                                 }}
-                            >
+                            > */}
                                 <Image
                                     src={card.image}
                                     alt={card.title}
                                     fill
-                                    className="object-contain drop-shadow-2xl"
+                                    className="object-contain drop-shadow-2xl "
                                 />
-                            </div>
-                        </div>
+                            {/* </div>
+                        </div> */}
                     </div>
 
                     {/* Right Column - Content */}

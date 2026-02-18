@@ -1,6 +1,6 @@
 "use client";
 
-import { TestimonialsColumn } from "@/components/ui/testimonials-columns";
+import { motion } from "motion/react";
 
 const testimonials = [
   {
@@ -59,59 +59,70 @@ const testimonials = [
   },
 ];
 
-const firstColumn = testimonials.slice(0, 3);
-const secondColumn = testimonials.slice(3, 6);
-const thirdColumn = testimonials.slice(6, 9);
+
 
 export function TestimonialsSection() {
   return (
-    <section
-      className="w-full py-8 sm:py-10 md:py-14 lg:py-20 relative overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(180deg, #1F0A3B 17.42%, #601A91 75.2%, #9220E1 113.76%)",
-      }}
-    >
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col items-center text-center mb-6 sm:mb-8 md:mb-10 lg:mb-14">
+    <section className="w-full py-8 sm:py-10 md:py-14 lg:py-20 relative overflow-hidden bg-white mt-0">
+      <div className="container mx-auto px-0 sm:px-4 md:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col items-center text-center mb-6 sm:mb-8 md:mb-10 lg:mb-14 px-3">
           <div className="mb-2 sm:mb-3 md:mb-4">
-            <div 
-              className="px-3 py-1 sm:px-4 sm:py-1.5 md:px-5 md:py-2 rounded-full inline-block"
-              style={{
-                border: '0.8px solid transparent',
-                backgroundImage: 'linear-gradient(#1F0A3B, #1F0A3B), linear-gradient(45deg, #6C219F 24.46%, #9220E1 50.07%, #6C219F 75.67%)',
-                backgroundOrigin: 'border-box',
-                backgroundClip: 'padding-box, border-box',
-              }}
-            >
-              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-white">Social Proof</span>
+            <div className="px-3 py-1 sm:px-4 sm:py-1.5 md:px-5 md:py-2 rounded-full inline-block bg-gray-100 border border-gray-200">
+              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-black">Testimonials</span>
             </div>
           </div>
 
           <h2 className="font-clash font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] 2xl:text-[54px] leading-[1.2] md:leading-[1.1] tracking-[0%] text-center mb-2 sm:mb-3 md:mb-4">
-            <span className="text-white">Trusted By Business Who</span>
+            <span className="text-black">Trusted By Business Who</span>
             <br />
-            <span className="text-white">Believe in </span>
+            <span className="text-black">Believe in </span>
             <span className="text-[#9220E1]">Innovation</span>
           </h2>
 
-          <p className="text-white/70 text-[10px] sm:text-xs md:text-sm lg:text-base">
+          <p className="text-gray-600 text-[10px] sm:text-xs md:text-sm lg:text-base">
             We collaborate with growth-focused brands — here's what they think.
           </p>
         </div>
 
-        <div className="flex justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[350px] sm:max-h-[450px] md:max-h-[550px] lg:max-h-[650px] xl:max-h-[740px] overflow-hidden">
-          <TestimonialsColumn testimonials={firstColumn} duration={15} />
-          <TestimonialsColumn
-            testimonials={secondColumn}
-            className="hidden md:block"
-            duration={19}
-          />
-          <TestimonialsColumn
-            testimonials={thirdColumn}
-            className="hidden lg:block"
-            duration={17}
-          />
+        <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <motion.div
+            className="flex gap-4 sm:gap-5 md:gap-6 flex-none pr-4 sm:pr-5 md:pr-6"
+            animate={{
+              translateX: "-50%",
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          >
+            {[...testimonials, ...testimonials].map((testimonial, i) => (
+              <div
+                className="p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl bg-[#F9FAFB] border border-gray-100 w-[280px] sm:w-[320px] md:w-[350px] flex-none"
+                key={i}
+              >
+                <div className="text-black text-xs sm:text-sm leading-relaxed">"{testimonial.text}"</div>
+                <div className="flex items-center gap-2 sm:gap-3 mt-3 sm:mt-4">
+                  <img
+                    width={40}
+                    height={40}
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="h-8 w-8 sm:h-10 sm:w-10 rounded-full object-cover border-2 border-gray-200"
+                  />
+                  <div className="flex flex-col text-left">
+                    <div className="font-medium tracking-tight leading-5 text-black text-sm sm:text-base">
+                      {testimonial.name}
+                    </div>
+                    <div className="leading-5 text-gray-500 tracking-tight text-xs sm:text-sm">
+                      {testimonial.role}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>
