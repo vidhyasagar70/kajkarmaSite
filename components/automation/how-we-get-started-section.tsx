@@ -13,13 +13,13 @@ const steps = [
     number: "2.",
     title: "We Plan the Automation",
     description: "We design the right workflows and automation strategy for your needs.",
-    image: "/AI-Automation/AI-Automation_We-Plan-the-Automation.jpg",
+    image: "/AI-Automation/AI-Automation-We-Plan-the-Automation.jpg",
   },
   {
     number: "3.",
     title: "Build, Test, and Go Live",
     description: "We build, test, and launch your automation quickly and smoothly.",
-    image: "/AI-Automation/AI-Automation_Build-Test-and-Go-Live.jpg",
+    image: "/AI-Automation/AI-Automation-Build-Test-and-Go-Live.jpg",
   },
 ];
 

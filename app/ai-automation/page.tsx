@@ -142,7 +142,7 @@ export default function Home() {
           "Predictive sales insights",
           "Intelligent routing of inquiries"
         ]}
-        imageSrc="/AI-Automation/AI-Automation_AI-Powered-Intelligent-Workflows.jpg"
+        imageSrc="/AI-Automation/AI-Automation-AI-Powered-Intelligent-Workflows.jpg"
         ctaText="Build AI-Powered Workflows"
       />
 
