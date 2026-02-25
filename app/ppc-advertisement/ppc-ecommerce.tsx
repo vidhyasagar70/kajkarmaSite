@@ -17,7 +17,7 @@ export function PPCEcommerce() {
                         className="w-full lg:w-1/2 relative aspect-[16/10] rounded-[32px] overflow-hidden shadow-xl"
                     >
                         <Image
-                            src="/page17.png"
+                            src="/ppc/PPC-Advertisement.jpg"
                             alt="Ecommerce PPC Advertising"
                             fill
                             className="object-cover"

@@ -5,7 +5,7 @@ import { WhatAutomationSection } from "@/components/automation/what-automation-s
 export function SalesOutreachSection() {
   return (
     <WhatAutomationSection
-      image="/Rectangle 5242 (4).svg"
+      image="/seo/SEO.jpg"
       imageAlt="Sales & Outreach"
       title="Sales & Outreach Services"
       descriptions={[

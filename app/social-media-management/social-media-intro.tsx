@@ -17,7 +17,7 @@ export function SocialMediaIntro() {
                         className="w-full lg:w-1/2 relative aspect-[16/10] rounded-[32px] overflow-hidden shadow-xl"
                     >
                         <Image
-                            src="/page19.png"
+                            src="/socialmedia/SocialMedia-Management.jpg"
                             alt="Professional Social Media Management"
                             fill
                             className="object-cover"
