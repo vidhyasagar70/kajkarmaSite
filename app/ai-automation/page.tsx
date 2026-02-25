@@ -142,7 +142,7 @@ export default function Home() {
           "Predictive sales insights",
           "Intelligent routing of inquiries"
         ]}
-        imageSrc="/AI-Automation/AI-Automation-AI-Powered-Intelligent-Workflows.jpg"
+        imageSrc="/Ai-Automation/AI-Automation-AI-Powered-Intelligent-Workflows.jpg"
         ctaText="Build AI-Powered Workflows"
       />
 
@@ -182,7 +182,7 @@ export default function Home() {
           "Pricing updates & CRM workflows",
           "Analytics reporting automation"
         ]}
-        imageSrc="/AI-Automation/AI-Automation_Automation for-Ecommerce-&Marketplaces.jpg"
+        imageSrc="/Ai-Automation/AI-Automation_Automation for-Ecommerce-&Marketplaces.jpg"
         ctaText="Automate Your Ecommerce Business"
       />
 
