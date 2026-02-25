@@ -73,12 +73,12 @@ export function SplitServiceSection({
                     </div>
 
                     {/* Image Column */}
-                    <div className="w-full lg:w-1/2 relative aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl">
+                    <div className="w-full lg:w-1/2 relative aspect-[4/3.5] rounded-[40px] overflow-hidden shadow-2xl">
                         <Image
                             src={imageSrc}
                             alt={title}
                             fill
-                            className="object-cover"
+                            className="object-cover object-top"
                         />
                     </div>
 

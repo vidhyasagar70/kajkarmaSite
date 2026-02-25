@@ -56,12 +56,12 @@ export function WeBuildSection() {
             </p>
             
             {/* Image */}
-            <div className="relative w-full max-w-[566px] aspect-[620/408] rounded-[26px] overflow-hidden">
+            <div className="relative w-full max-w-[566px] aspect-[620/500] rounded-[26px] overflow-hidden">
               <Image
                 src="/Ai-Automation/AI_Automation_We_Build&Automate.jpg"
                 alt="We Build & Automate"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
           </div>

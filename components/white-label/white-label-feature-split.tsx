@@ -38,13 +38,13 @@ export function WhiteLabelFeatureSplit({
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, ease: "easeOut" }}
-                        className="w-full lg:w-1/2 relative aspect-[16/10] rounded-[32px] overflow-hidden shadow-xl"
+                        className="w-full lg:w-1/2 relative aspect-[16/12] rounded-[32px] overflow-hidden shadow-xl"
                     >
                         <Image
                             src={imageSrc}
                             alt={imageAlt}
                             fill
-                            className="object-cover"
+                            className="object-cover object-top"
                         />
                         <div className="absolute inset-0 bg-gradient-to-tr from-[#9220E1]/5 to-transparent pointer-events-none" />
                     </motion.div>

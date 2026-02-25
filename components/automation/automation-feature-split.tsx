@@ -51,7 +51,7 @@ export function AutomationFeatureSplit({
                             src={imageSrc}
                             alt={imageAlt}
                             fill
-                            className={objectFit === "contain" ? "object-contain" : "object-cover"}
+                            className={objectFit === "contain" ? "object-contain object-top" : "object-cover object-top"}
                         />
                         {!noBorder && <div className="absolute inset-0 bg-gradient-to-tr from-[#7C3AED]/5 to-transparent pointer-events-none" />}
                     </motion.div>
