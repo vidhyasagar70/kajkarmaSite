@@ -44,7 +44,7 @@ export default function MVPPage() {
           "Iterate faster",
           "Prepare for investor presentations"
         ]}
-        imageSrc="/page13.png"
+        imageSrc="/mvp/MVPDevelopmen-What-is-MVPDevelopment.jpg"
         ctaText="Validate Your Product Idea"
       />
 

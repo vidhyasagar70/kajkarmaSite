@@ -7,7 +7,7 @@ const steps = [
     number: "1.",
     title: "Tell Us Your Process",
     description: "Tell us about your business, tools, and what you want to automate.",
-    image: "/AI-Automation/AI-Automation_ Tell-Us-Your-Process.jpg",
+    image: "/Ai-Automation/AI-Automation-Tell-Us-Your-Process.jpg",
   },
   {
     number: "2.",

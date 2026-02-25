@@ -18,7 +18,7 @@ const serviceCards: ServiceCard[] = [
     title: "AI\nAutomation",
     description:
       "We create intelligent AI solutions and automated workflows that simplify processes, enhance efficiency, and drive business growth.",
-    image: "/ai.png",
+    image: "/others/CustomMarket-Solution.jpg",
     services: ["Whatsapp Automation", "Custom AI Solutions", "AI Workflows"],
     buttonText: "Automate your Workflows",
   },
@@ -27,7 +27,7 @@ const serviceCards: ServiceCard[] = [
     title: "Web\nDevelopment",
     description:
       "We build stunning, high-performance websites and web applications that deliver exceptional user experiences and drive conversions.",
-    image: "/webuild.png",
+    image: "/others/Custom-Market-Solution-Web-Development.jpg",
     services: ["Custom Websites", "E-commerce Solutions", "Web Applications"],
     buttonText: "Build your Website",
   },
@@ -36,7 +36,7 @@ const serviceCards: ServiceCard[] = [
     title: "Brand\nStrategy",
     description:
       "We craft compelling brand identities and strategies that resonate with your audience and set you apart from the competition.",
-    image: "/hero.png",
+    image: "/others/Custom-Market-Solution-Brand.jpg",
     services: ["Brand Identity", "Visual Design", "Brand Guidelines"],
     buttonText: "Transform your Brand",
   },
@@ -45,7 +45,7 @@ const serviceCards: ServiceCard[] = [
     title: "Digital\nMarketing",
     description:
       "We drive growth through data-driven marketing strategies, SEO optimization, and targeted campaigns that deliver measurable results.",
-    image: "/we.png",
+    image: "/others/Custom-Market-Solution-DigitalMarketing.jpg",
     services: ["SEO Optimization", "Social Media Marketing", "Content Strategy"],
     buttonText: "Grow your Business",
   },

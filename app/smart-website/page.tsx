@@ -39,7 +39,7 @@ export default function SmartWebsitePage() {
                     "High-speed performance optimization"
                 ]}
                 ctaText="Build Your Ecommerce Website"
-                imageSrc="/page13.png"
+                imageSrc="/others/Ecommerce-Website-Development.jpg"
                 imageOnRight={true}
             />
 
@@ -56,7 +56,7 @@ export default function SmartWebsitePage() {
                     "Structured SEO for luxury keywords"
                 ]}
                 ctaText="Launch Your Jewelry Website"
-                imageSrc="/page3 (1).png"
+                imageSrc="/others/Mobile App_Jewelry&Diamond-IndustryApplications.jpg"
                 imageOnRight={false}
                 theme="light"
             />
@@ -74,7 +74,7 @@ export default function SmartWebsitePage() {
                     "SaaS-style website builds"
                 ]}
                 ctaText="Discuss Your Custom Project"
-                imageSrc="/page12.png"
+                imageSrc="/others/Custom-Market-Solution-Web-Development.jpg"
                 imageOnRight={true}
             />
 

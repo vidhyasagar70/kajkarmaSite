@@ -46,7 +46,7 @@ export default function Home() {
           "Custom web applications & SaaS systems",
           "Ongoing maintenance & support"
         ]}
-        imageSrc="/page9.png"
+        imageSrc="/whitelabel/WhiteLabel_Your-Backend-Technology.jpg"
         ctaText="Request White Label Details"
       />
 
@@ -92,7 +92,7 @@ export default function Home() {
           "Flexible pricing models",
           "Long-term partnership structure"
         ]}
-        imageSrc="/page10.png"
+        imageSrc="/whitelabel/White-Label_WhiteLabel.jpg"
         ctaText="Partner With a Reliable Tech Team"
       />
 
@@ -172,7 +172,7 @@ export default function Home() {
           "Branded documentation if required",
           "Private communication channels"
         ]}
-        imageSrc="/page11.png"
+        imageSrc="/whitelabel/White Label_Confidentiaity&Client-Protection.jpg"
         ctaText="Protect Your Client Relationships"
       />
 
@@ -195,7 +195,7 @@ export default function Home() {
           "Clear communication structure",
           "Long-term partnership mindset"
         ]}
-        imageSrc="/page12.png"
+        imageSrc="/whitelabel/White-Label-Why-Agencies-Partner-With-Us.jpg"
         ctaText="Increase Your Agency Profitability"
       />
 

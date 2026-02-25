@@ -13,6 +13,8 @@ interface AutomationFeatureSplitProps {
     ctaText?: string;
     ctaHref?: string;
     points?: string[];
+    objectFit?: "cover" | "contain";
+    noBorder?: boolean;
 }
 
 export function AutomationFeatureSplit({
@@ -23,7 +25,9 @@ export function AutomationFeatureSplit({
     reverse = false,
     ctaText,
     ctaHref = "#",
-    points
+    points,
+    objectFit = "cover",
+    noBorder = false
 }: AutomationFeatureSplitProps) {
     return (
         <section className={cn("w-full py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8", reverse ? "bg-white" : "bg-[#FBF9FE]")}>
@@ -38,15 +42,18 @@ export function AutomationFeatureSplit({
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, ease: "easeOut" }}
-                        className="w-full lg:w-1/2 relative aspect-[16/10] rounded-[32px] overflow-hidden shadow-xl"
+                        className={cn(
+                            "w-full lg:w-1/2 relative aspect-[16/10]",
+                            noBorder ? "" : "rounded-[32px] overflow-hidden shadow-xl"
+                        )}
                     >
                         <Image
                             src={imageSrc}
                             alt={imageAlt}
                             fill
-                            className="object-cover"
+                            className={objectFit === "contain" ? "object-contain" : "object-cover"}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-tr from-[#7C3AED]/5 to-transparent pointer-events-none" />
+                        {!noBorder && <div className="absolute inset-0 bg-gradient-to-tr from-[#7C3AED]/5 to-transparent pointer-events-none" />}
                     </motion.div>
 
                     {/* Text Column */}
