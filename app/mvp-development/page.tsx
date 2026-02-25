@@ -147,7 +147,7 @@ export default function MVPPage() {
           "Speed-to-market mindset",
           "Long-term growth planning"
         ]}
-        imageSrc="/page14.png"
+        imageSrc="/mvp/MVPDevelopment_Why-Choose-Kajkarma.jpg"
         ctaText="Work With an MVP-Focused Team"
       />
 
@@ -168,7 +168,7 @@ export default function MVPPage() {
           "User growth",
           "Cloud infrastructure scaling"
         ]}
-        imageSrc="/page15.png"
+        imageSrc="/mvp/MVPDevelopmen-Built-for-Future-Scaling.jpg"
         ctaText="Build for Long-Term Growth"
       />
 
