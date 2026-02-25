@@ -39,7 +39,7 @@ export function WebPerformanceSection() {
                         </p>
 
                         <button
-                            className="w-fit  bg-[#7C3AED] text-white rounded-full font-medium transition-all flex items-center gap-2 group shadow-md shadow-[#9220E1]/10 hover:bg-[#9220E1]"
+                            className="w-fit bg-[#7C3AED] text-white rounded-full font-medium transition-all flex items-center gap-2 group shadow-md shadow-[#9220E1]/10 hover:bg-[#9220E1]"
                             style={{
                                 padding: "10px 22px",
                                 fontSize: "14px",
@@ -50,25 +50,15 @@ export function WebPerformanceSection() {
                         </button>
                     </div>
 
-                    {/* Right Column - Visual Placeholder */}
-                    <div className="w-full lg:w-1/2 relative aspect-square rounded-[40px] overflow-hidden bg-[#F8F7FC] flex items-center justify-center p-8">
-                        <div className="relative w-full h-full border border-[#9220E1]/20 rounded-2xl bg-white shadow-xl overflow-hidden">
-                            {/* Abstract browser/performance visualization */}
-                            <div className="h-8 w-full bg-[#F8F7FC] border-b border-[#F0F0F0] flex items-center px-4 gap-1.5">
-                                <div className="size-2.5 rounded-full bg-red-400" />
-                                <div className="size-2.5 rounded-full bg-yellow-400" />
-                                <div className="size-2.5 rounded-full bg-green-400" />
-                            </div>
-                            <div className="p-8 flex flex-col gap-4">
-                                <div className="h-10 w-2/3 bg-[#F8F7FC] rounded-md" />
-                                <div className="h-4 w-full bg-[#F8F7FC] rounded-sm" />
-                                <div className="h-4 w-5/6 bg-[#F8F7FC] rounded-sm" />
-                                <div className="grid grid-cols-3 gap-4 mt-4">
-                                    <div className="aspect-square bg-[#9220E1]/5 rounded-lg border border-[#9220E1]/10" />
-                                    <div className="aspect-square bg-[#9220E1]/5 rounded-lg border border-[#9220E1]/10" />
-                                    <div className="aspect-square bg-[#9220E1]/5 rounded-lg border border-[#9220E1]/10" />
-                                </div>
-                            </div>
+                    {/* Right Column - Image */}
+                    <div className="w-full lg:w-1/2 flex items-center justify-center">
+                        <div className="relative rounded-[40px] overflow-hidden shadow-xl border border-[#9220E1]/20 bg-white flex items-center justify-center" style={{ width: "100%", height: "100%", maxWidth: "600px", minHeight: "380px" }}>
+                            <img
+                                src="/others/Websites-Built-for-Performance-Conversion-Growth.jpg"
+                                alt="Websites Built for Performance, Conversion & Growth"
+                                className="object-cover rounded-[40px]"
+                                style={{ width: "100%", height: "100%", minHeight: "380px", maxWidth: "600px" }}
+                            />
                         </div>
                     </div>
                 </div>
