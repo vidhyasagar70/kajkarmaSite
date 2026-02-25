@@ -35,7 +35,7 @@ export default function Home() {
             We build automation systems that connect your tools, automate your workflows, and intelligently handle repetitive tasks — so your team can focus on growth.
           </>
         }
-        imageSrc="/page9.png"
+        imageSrc="/Ai-Automation/AI Automation.jpg"
         ctaText="Automate Your Business Today"
       />
 
@@ -62,7 +62,7 @@ export default function Home() {
           "Scale operations without increasing size",
           "Increase productivity across departments"
         ]}
-        imageSrc="/page10.png"
+        imageSrc="/Ai-Automation/What_is_AI_Automation.jpg"
         ctaText="Book an Automation Strategy Call"
       />
 
@@ -117,7 +117,7 @@ export default function Home() {
           "Operations: Onboarding & Task systems",
           "Data Sync: Multi-platform synchronization"
         ]}
-        imageSrc="/page11.png"
+        imageSrc="/others/Business-Areas-We-Automate.jpg"
         ctaText="Streamline Your Operations Now"
       />
 
@@ -142,7 +142,7 @@ export default function Home() {
           "Predictive sales insights",
           "Intelligent routing of inquiries"
         ]}
-        imageSrc="/page12.png"
+        imageSrc="/AI-Automation/AI-Automation_AI-Powered-Intelligent-Workflows.jpg"
         ctaText="Build AI-Powered Workflows"
       />
 
@@ -182,7 +182,7 @@ export default function Home() {
           "Pricing updates & CRM workflows",
           "Analytics reporting automation"
         ]}
-        imageSrc="/page9.png"
+        imageSrc="/AI-Automation/AI-Automation_Automation for-Ecommerce-&Marketplaces.jpg"
         ctaText="Automate Your Ecommerce Business"
       />
 

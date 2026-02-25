@@ -7,19 +7,19 @@ const steps = [
     number: "1.",
     title: "Tell Us Your Process",
     description: "Tell us about your business, tools, and what you want to automate.",
-    image: "/image copy.png",
+    image: "/AI-Automation/AI-Automation_ Tell-Us-Your-Process.jpg",
   },
   {
     number: "2.",
     title: "We Plan the Automation",
     description: "We design the right workflows and automation strategy for your needs.",
-    image: "/Rectangle 5243 (6).svg",
+    image: "/AI-Automation/AI-Automation_We-Plan-the-Automation.jpg",
   },
   {
     number: "3.",
     title: "Build, Test, and Go Live",
     description: "We build, test, and launch your automation quickly and smoothly.",
-    image: "/Rectangle 5243 (1).png",
+    image: "/AI-Automation/AI-Automation_Build-Test-and-Go-Live.jpg",
   },
 ];
 

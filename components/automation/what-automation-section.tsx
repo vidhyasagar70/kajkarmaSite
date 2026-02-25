@@ -15,7 +15,7 @@ interface WhatAutomationSectionProps {
 }
 
 export function WhatAutomationSection({
-  image = "/robot.svg",
+  image = "/Ai-Automation/AiAutomation_What Automation_Is_This.jpg",
   imageAlt = "Section Image",
   title = "What Automation Is This?",
   descriptions = [

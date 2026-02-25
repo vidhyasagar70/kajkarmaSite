@@ -12,22 +12,22 @@ const solutions: SolutionCard[] = [
     {
         title: "Ecommerce Application Development",
         description: "Custom ecommerce platforms, Shopify integrations, headless commerce systems, subscription models, and B2B portals designed for conversion and operational efficiency.",
-        image: "/kajkarmaimages/ecomsolution.jpg ",
+        image: "/others/Mobile-App-Ecommerce.jpg",
     },
     {
         title: "Marketplace Platform Development",
         description: "Multi-vendor marketplaces with seller dashboards, commission engines, role-based access control, and secure payment architecture built for expansion.",
-        image: "/kajkarmaimages/marketplaceplatformdevelopment.jpg",
+        image: "/others/Mobile-App_Marketplace-Platform-Development.jpg",
     },
     {
         title: "Jewelry & Diamond Industry Applications",
         description: "Inventory search systems, real-time pricing tools, B2B trading portals, RapNet integrations, and buyer management systems tailored for the diamond and jewelry industry.",
-        image: "/kajkarmaimages/jimages.jpg",
+        image: "/others/Mobile App_Jewelry&Diamond-IndustryApplications.jpg",
     },
     {
         title: "Custom Business & SaaS Applications",
         description: "CRM systems, internal dashboards, booking platforms, automation tools, and scalable SaaS products designed for operational growth.",
-        image: "/kajkarmaimages/cwd.jpg",
+        image: "/others/Custom-Market-Solution-Web-Development.jpg",
     },
 ];
 

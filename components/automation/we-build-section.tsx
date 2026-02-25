@@ -58,7 +58,7 @@ export function WeBuildSection() {
             {/* Image */}
             <div className="relative w-full max-w-[566px] aspect-[620/408] rounded-[26px] overflow-hidden">
               <Image
-                src="/we.png"
+                src="/Ai-Automation/AI_Automation_We_Build&Automate.jpg"
                 alt="We Build & Automate"
                 fill
                 className="object-cover"
@@ -77,7 +77,7 @@ export function WeBuildSection() {
             {/* Image first on right */}
             <div className="relative w-full max-w-[566px] aspect-[620/408] rounded-[26px] overflow-hidden mb-6 sm:mb-8 md:mb-10">
               <Image
-                src="/webuild.png"
+                src="/Ai-Automation/AI_Automation_You Run&Scale.jpg"
                 alt="You Run & Scale"
                 fill
                 className="object-cover"

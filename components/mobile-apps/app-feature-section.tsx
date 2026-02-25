@@ -10,7 +10,7 @@ export function AppFeatureSection() {
                     {/* Left Column - Image */}
                     <div className="w-full lg:w-1/2 relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl">
                         <Image
-                            src="/page10.png" // Placeholder, I can update this to a generated image if needed
+                            src="/others/MobileApp_High-Performance-Ecommerce.jpg" // Placeholder, I can update this to a generated image if needed
                             alt="Ecommerce & Marketplace Engineering"
                             fill
                             className="object-cover"
